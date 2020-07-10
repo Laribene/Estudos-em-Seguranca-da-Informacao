@@ -1,0 +1,58 @@
+Sistema de Detecção de Instrusões(IDS)
+
+Meios técnicos de descobrir em uma rede quando
+está tendo acessos não autorizados que podem
+indicar a ação de um hacker ou funcionários
+mal intencionados.
+
+IDS é diferente do Firewall
+O Firewall é bloqueia ou deixar passar um
+pacote, mas o IDS só faz sua identificação e
+registra em um log e mais nada. 
+
+IDS em redes switches: Porque nesse tipo
+de rede os dados trafegam diretamente para
+seus destinos, o que dificulta a utilização
+de IDS genéricos, necessitando de IDS especifico,
+o que pode ser até ser diferenciado do HUB, o qual 
+é muito mais facil de detectar a partir de um IDS, 
+porem os hub deixam a internet lenta.
+
+O IDS precisa ter o Port mirroring (obrigatório)
+SPAN- Switched Port Analyzer, ou Port Mirroring
+é a capacidade de espelhar o tráfego de uma
+porta(ou portas, ou VLAN) para outra.
+Switches Layer 3 tem o Port Mirroring.
+
+IDS em redes de alta velocidade:
+- O software IDS conseguirá analisar toda a grande
+quantidade de dados que trafegam na rede?
+- O hardware de monitoramento suportará tamanho
+tráfego?
+- Os IDS não irão prejudicar a performance da rede
+se tornando um gargalo?
+
+Como contornar esse problema?
+- Escolher qual maquina monitorar. Target IDS: escolher só o servidor,
+ou vc escolher só roteador.
+- Só monitorar o direcionamento de tráfego
+
+
+IDS do mercado:
+Snort: Software livre de detecção de intrusão em redes(NIDS)
+Suricata: ID/PS detecta e tbem previne ou seja bloqueia
+
+
+INTRUSION PREVENTION SYSTEMS(IPS)
+
+Tem que trabalhar online.
+O IPS possibilita decisões de acesso baseadas no conteudo da aplicação e não apenas no endereço IP 
+ou em portas, como os firewalls tradicionais trabalham.
+Entretando nada imprede que IPS utilizem regras baseadas em portas e endereço IP.
+
+IDS e IPS em alguns casos são complementares.
+
+UTM Appliance
+Suricata: ID/IPS livre
+
+Fazer um analise prévia da rede para implementar o IDP e IPS

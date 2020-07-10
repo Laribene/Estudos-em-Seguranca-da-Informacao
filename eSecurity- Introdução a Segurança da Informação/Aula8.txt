@@ -1,0 +1,42 @@
+Um firewall dispositivo de rede de computadores
+aplicar politica de segurança em determinado ponto 
+de rede.
+O firewall pode ser do tipo filtros de pacotes, proxy de
+aplicações.
+Firewall associado a redes TC/IP.
+Appliance: Voce instala um SO em cima de um hardware, 
+porem esse SO é 100% focado no firewall.
+Firewall vive baseado em regras.
+
+O Firewall tem que ter a chave SSL, onde o firewall gera
+uma outra chave que é instalada no servidor.
+Porque isso? Porque o firewall acaba descriptografando utili
+zando a chave dele e analisando o conteudo e criptografando de novo
+O firewall tem que gerar um certificado proprio. e instala
+esse certificado em varias estações.
+
+Firewall de software e hardware.
+
+Firewall de software:
+-Do windows
+-Se fizer regra no firewall, você deve documentar essa regra.
+- Desavantagens: Se utilizar um programa mais pesado,
+o firewall irá trabalhar mais lentamente, o firewall
+pode ficar sobrecarregado, e sobrecarregar o SO.
+
+Ambiente ideal: Fazer um fireWall local
+Firewall gratuito:
+- ZoneAlarm Free Antivirus + Firewall
+- Comodo Firewall
+
+Firewall de Hardware:
+- Só tem um firewall(software) em cima de uma máquina especifica
+- Minimo ter duas placas de rede
+- Usa disco SSD
+- Virtual Appliance (PFSense : Appliance gratuito, 
+Endian Firewall, IPCop, Zentyal, Iptables(não necessariamente firewall mas ajuda no firewall))
+
+UTM: Central Unificada de Gerenciamento de Ameaças
+Central de segurança em uma máquina especifica
+
+

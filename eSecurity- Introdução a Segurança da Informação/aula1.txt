@@ -1,0 +1,61 @@
+Segurança da informação - Responder direto ao presidente/diretor/gerente da empresa e não ao TI ou área juridica
+CLT por causa do cargo de confiança
+
+5 pilares da Segurança da informação:
+
+- Integridade
+Garante que a informação manipulada mantenha todas as caracteristicas originais.
+ARP Spoofing, Man in the middle.
+
+- Confidencialidade
+Só pode ser visto por pessoas autorizadas.
+Limita o acesso a informação, autorizadas só pelo proprietário da informação.
+
+- Disponibilidade
+informação sempre disponivel. Continuidade de negocio/nunca sair do ar(bancos, casasbahia, mercadolivre)
+Backup.
+DDOS.
+
+- Autenticidade
+Garante que a informação é proveniente da fonte anunciada e que não foi alvo de mutações
+Emails como spam não sao autenticados, phishing
+
+- Não Repudio ou irretratabilidade
+Impossibilidade de negar a autoria em relação a uma transação anteriormente feita
+Onde, quando, e quem.
+logs.
+
+Certificação
+ISO 7002
+
+ITIL - E suas versões
+Cobit
+
+- Infra:
+LPI(Linux Professional Institute) 1/2 e 3
+- CCNA (Cisco Certified Network Associate)
+  - CCNA Security
+
+- Dev
+CSSLP(Certified Secure Software Lifecycle Professional)
+
+- Segurança de Redes
+  - CompTIA Security+ (FACIL DE TIRAR) Livro - Yuri Diogenes
+  - ECSA - EC- Council Security Analyst(analisa o que o hacker ethico faz)
+  Formação avançada de hacking ético que completa
+  a Certificação Certified Ethical Hacker
+
+- Controle, Auditoria e Conformidade:
+ISO 27001 - Certifica a empresa
+ISO 27002(FACIL DE TIRAR)Certificações do profissional(TIexames.com.br)
+CISA - Certified Information Systems Auditor
+
+Técnicas em Segurança da informação:
+CEH - Certified Ethical hacker
+LPT - Licensed Penetration Tester
+
+Gestão em Segurança da informação:
+CISSP - Certified Information Systems Security Professional
+(DIFICIL DE TIRAR)
+
+http://www.seginfo.com.br/principais-certificacoes-na-area-de-seguranca-da-informacao/#2-todas-certificacoes-dsic

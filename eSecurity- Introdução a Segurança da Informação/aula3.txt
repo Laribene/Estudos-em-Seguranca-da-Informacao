@@ -1,0 +1,79 @@
+TCP - Transmission Control Protocol
+-Camada de transporte TCP/IP
+-Permite que duas maquinas se comuniquem
+-Possuem protocolo diferente se elas não conseguem se comunicar
+- TCP é seguro e confiavel, porem é mais lenta
+Timeout = enviar a resposta varias vezes confiando que a outra maquina
+não recebeu
+
+
+Comunicação TCP -
+3way handshake
+(Cliente)Syn - >(Servidor)
+(Cliente)<- SYN, ACK(SYN) (Servidor)
+(Cliente)-> ACK(SYN) (Servidor)
+
+Encerrando comunicaçao -
+(Cliente) -> FIN (Servidor)
+(Cliente) <- ACK (Servidor)
+(Cliente) <- FIN (Servidor)
+(Cliente) -> ACK (Servidor)
+
+UDP
+-Camada de transporte
+-Não é protocolo confiavel e mais rapido
+- Comunicação rapida (Streamer de video)
+RFC?
+
+Portas:
+65535 portas TCP e 65535  portas UDP
+-TCP:
+21:FTP
+22:SSH
+23:Telnet
+25: SMTP
+80: HTTP
+110: POP3
+443: HTTPS
+-UDP:
+53: DNS
+69: TFTP
+123:NTP
+
+Comunicação se faz com utilizando portas de Origem e Destino
+Porta Origem > 1024  --> Porta Destino < 1024
+Quando faz varredura provavelmente vc vai atras de portas baixas < 1024
+
+Pacotes de broadcast enviado para todas as máquinas.
+
+
+Protocolo ICMP:
+Protcolo de diagnóstico, usado para fornecer relatorios de algo que não está
+funcionando bem.
+
+As mensagens ICMP são enviadas automaticamente quando:
+-Um pacote IP não consegue chegar ao seu Destino
+- O gateway não consegue retransmitir os pacotes na fequencia adequada(Gateway congestionado)
+- O roteador ou Encaminhador indica uma rota melhor para a máquina a enviar Pacotes
+- Ferramentas comumente usadas baseadas nesse protocolo são: Ping e Traceroute
+
+Firewall bloqueiam as respostas ICMP Reply dificultando o Ping e o TRaceroute
+
+nmap por padrão varre as portas baixas
+
+nmap -p135 192.168.0.1
+
+Modelo OSI:
+Modelo de refencia da ISO, modelo padrão para protocolos de Comunicação.
+
+
+
+7 - Aplicação - HTTP, FTP, SSH, Telnet,
+6-Apresentação - XDR, TLS(criptografia)
+5-Sessão - NetBOS(Gerenciar)
+4-Transporte - TCP, UDP, RIP
+3-Rede - IP, ICMP, ARP, NAT
+2-Enlace de Dados -  Como trabalha na rede(Wifi, telnet, token, Ethernet)
+1-Fisico - Modem, roteador, placa de rede
+
+O firewall não ajuda na Camada 4 e 3

@@ -1,0 +1,52 @@
+Politica de segurança da informação:
+- Garantir a aplicação dos principios e diretrizes de proteção das informações  da organização, dos clientes e do público em geral.
+- Se aplica a todos, empregados, estagiarios, contratados, prestadores de serviços, parceiros e fornecedores que utilizam as informações da empresa.
+- Visa proteger as informações de diversos tipos de ameaças, para garantir a continuidade dos negócios.
+- Segurnaça da informação impacta Pessoas, processos
+- Estabelece o que deve e o que não deve ser feito
+- Minimizar um incidente
+- Politica são construidas do 0 e são construidas de acordo com a empresa
+
+Maturidade de segurança da informação:
+Fases:(do menor para o maior)
+-Segurança reativa: Backup, antimalware e firewall(processos básicos)
+Preocupação com o conteudo acessado pelos usuários, atraves de soluções tecnicas de controle
+de conteudo acessado web(filtro de URL) e antispam, com enfoque maior em produtividade da força de trabalho do que na SI
+
+- Politicas, Normas e Acordos(ou fase documental)
+Importancia do fator humano, juridico e normativo.
+Treina o pessoal da empresa e depois da o acordo para eles assinarem.
+Respaldo juridico e processos internos de responsabilização e punição
+
+- Analise de Risco
+Analise de risco é diferente de analise de vulnerabilidade
+Documentação
+Existe um risco
+Classificação do risco (semaforo)
+
+- Gestão de risco
+Não apenas a implementação de controles para mitigar os riscos identificados na análise de risco, mas também calcular o risco residual e até mesmo permitir que a direção da empresa aceite riscos
+Como contornar um risco
+
+- Sistema de Gestão de Segurança da Informação
+1 - Definir politica de Segurança da informação
+2 - Definir escopo do SGSI
+3 - Executar Avaliação do SGSI
+4 - Gerenciar risco
+5 - Selecionar controles a serem implementados
+6 - Preparar a declaração de aplicabilidade
+
+Plan - Estabelece contexto do SGSI e da Avaliação do Risco(Prepara a parte documental)
+Do - Implementa o processo q vc fez(pode ser novo ou nao(atualização))
+Check - Monitora se o processo ta ok e se tem retorno
+Act - Melhoria do processo
+Ai volta pro Plan e continua infinito
+
+O que é risco?
+Criam e aumentam o potencial de danos e perdas.
+risco = Ameaça x vulnerabilidade x Valor do risco
+
+- Conquistando a aceitação:
+Deve ser assinada por funcionarios e terceiros, de todas as classes hierárquicas dentro da empresa.
+Faz de cima pra baixo (Começando na presidencia e descendo)
+Fazer treinamento sobre a politica(conscientização, monitore)
