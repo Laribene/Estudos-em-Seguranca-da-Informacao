@@ -29,12 +29,12 @@ Fases:(do menor para o maior)
 	Como contornar um risco
 
 - Sistema de Gestão de Segurança da Informação
-1 - Definir politica de Segurança da informação
-2 - Definir escopo do SGSI
-3 - Executar Avaliação do SGSI
-4 - Gerenciar risco
-5 - Selecionar controles a serem implementados
-6 - Preparar a declaração de aplicabilidade
+	1 - Definir politica de Segurança da informação
+	2 - Definir escopo do SGSI
+	3 - Executar Avaliação do SGSI
+	4 - Gerenciar risco
+	5 - Selecionar controles a serem implementados
+	6 - Preparar a declaração de aplicabilidade
 
 Plan - Estabelece contexto do SGSI e da Avaliação do Risco(Prepara a parte documental)
 Do - Implementa o processo q vc fez(pode ser novo ou nao(atualização))
