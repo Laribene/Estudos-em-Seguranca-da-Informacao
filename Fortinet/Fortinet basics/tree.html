@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style>
+.node
+{
+    padding-left: 20px;
+    display: block;
+}
+
+.node_collapsed
+{
+    padding-left: 20px;
+    display: none;
+
+    
+    visibility: hidden;
+    display: none;
+}
+
+
+
+a:active
+{
+text-decoration:none;
+color: #0000FF;
+font-weight: bold;
+}
+
+a:visited
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:link
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:hover
+{
+text-decoration: underline;
+color: #500;
+font-weight: bold;
+}
+
+</style>
+
+
+<script language="javascript">
+  
+    var displayStates = [];
+
+    function showDiv(div)
+    {    
+        div.style.height     = "";
+        div.style.display    = "block";
+        div.style.visibility = "visible";
+    }
+
+    function hideDiv(div)
+    {
+        div.style.height     = "0px";
+        div.style.display    = "none";      
+        div.style.visibility = "hidden";
+    }
+
+    function toggleDiv(div, defaultState)
+    {
+
+        // set default on first use
+        if (displayStates[div] == undefined)
+            displayStates[div] = defaultState;
+
+        // toggle state
+        displayStates[div] = !displayStates[div];       
+
+        // hide / show
+        if (displayStates[div])
+            showDiv(div);
+        else {
+            hideDiv(div);
+        }
+    }
+
+    function toggleDivName(divname, defaultState)
+    {
+        toggleDiv(document.getElementById(divname), defaultState);
+    }
+
+</script>
+
+<nobr><tt><a href='javascript: toggleDivName("2105c191-be19-40fb-a0b6-bb59af64b571", true)'>+</a>&nbsp;</tt>Fortinet trainning</nobr><br/>
+<div id='2105c191-be19-40fb-a0b6-bb59af64b571' class='node'><nobr><tt><a href='javascript: toggleDivName("0ac8fe38-4ef7-4569-8edc-1db0b24199f0", true)'>+</a>&nbsp;</tt>NSE1</nobr><br/>
+<div id='0ac8fe38-4ef7-4569-8edc-1db0b24199f0' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='nse1/bad%20actors/page.html' target='viewer'>Bad Actors</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse1/cio%20perspectives/page.html' target='viewer'>CIO Perspectives</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse1/ciso%20perspectives/page.html' target='viewer'>CISO Perspectives</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse1/cfo%20perspective/page.html' target='viewer'>CFO Perspective</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse1/personal%20security%20awareness/page.html' target='viewer'>Personal Security Awareness</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("35a30edb-ee1e-42d6-86c7-a7a135b677ca", true)'>+</a>&nbsp;</tt>NSE2</nobr><br/>
+<div id='35a30edb-ee1e-42d6-86c7-a7a135b677ca' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/soar/page.html' target='viewer'>SOAR</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/cloud%20security/page.html' target='viewer'>Cloud Security</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/sd-wan/page.html' target='viewer'>SD-WAN</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/endpoint/page.html' target='viewer'>EndPoint</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/threat%20informations/page.html' target='viewer'>Threat Informations</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/firewall/page.html' target='viewer'>Firewall </a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/network%20acess%20control/page.html' target='viewer'>Network Acess Control</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/sandbox/page.html' target='viewer'>SandBox</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/email%20gateway/page.html' target='viewer'>Email Gateway</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/security%20information%20and%20event%20managemen/page.html' target='viewer'>Security Information and Event management</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/web%20application%20firewall/page.html' target='viewer'>Web Application Firewall</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/web%20filter/page.html' target='viewer'>Web filter</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nse2/wifi/page.html' target='viewer'>Wifi</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='fortinet%20solutions/page.html' target='viewer'>Fortinet solutions</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("a3db3b3f-2677-415d-ad0d-c715bbfc118a", false)'>+</a>&nbsp;</tt><a href='trash' target='viewer'>Trash</a></nobr><br/>
+<div id='a3db3b3f-2677-415d-ad0d-c715bbfc118a' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%202/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%203/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%204/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%205/page.html' target='viewer'>New Page</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='trash/new%20page%206/page.html' target='viewer'>New Page</a></nobr><br/>
+</div>
+</div>
+</body></html>
