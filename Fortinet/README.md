@@ -1,1 +1,1 @@
-https://laribene.github.io/Ethical-hacking-studies/Fortinet/Fortinet%20basics/
+https://laribene.github.io/Information-Security-studies/Fortinet/Fortinet%20basics/
