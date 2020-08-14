@@ -1,0 +1,62 @@
+SYN Flood:
+- Quando uma sessão é iniciada entre o cliente e o servidor na internet usando
+o protocolo TCP, um pequeno espaço de buffer na memoria é reservado no servidor 
+para lidar com o hand-shaking troca de mensagens para configurar a sessão.
+O pacote da sessão estabelecida iclui uma campo SYN que identifica a sequencia
+de mensagens trocadas.
+Um SYN flood tem a intenção de interromper esse processo, mandando um numero de 
+connection requests muito rápido e ele falha ao tentar responder e enviar de volta
+para o server.
+
+Smurf attack:
+- Um pacote ICMP é enviado para o endereço de broadcast da internet, porem ele retorna um
+endereço que foi alterado para coincidir com um dos computadores da rede, como um servidor
+de chaves. Todos os computadores na rede irão responder pingando o computador alvo.
+- O malware Smurf é usado para gerar uma solicitação Echo falsa contendo um IP de origem 
+falsificado, que é, na verdade, o endereço do servidor de destino
+
+Ping of Death:
+- Sobrecarregar o sistema da vitima.
+- TCP packets tem um limite de tamanho. Em alguns casos, simplesmente enviando um pacote muito grande,
+pode fazer com que a maquina alvo seja desligada.
+
+
+UDP flood:
+- UDP(Aplicações que necessitem de transmissão de dados rapida e eficiente, como 
+estreaming de video e jogos online)
+- Um ataque UDP ocorre quando um atacante manda pacotes UDP para uma porta randomica do sistema da vitima.
+Quando o sistema da vitimia recebe um pacote UDP, ele irá determinar qual aplicação está
+esperando na porta de destino.Quando ele percebe que não tem nenhuma aplicação
+esperando na porta, ele irá gerar um pacote ICMP de destino, inalcançavel para o
+endereço de origem forjado. Se pacotes UDP suficintes atingirem a porta da vitima,
+fará com que o sistema pare de funcionar.
+
+DOS TOOls:
+- Low Orbit Ion Cannon(LOIC)
+- High Orbit Ion Cannon(HOIC)
+
+Buffer Overflow:
+- Colocar mais informação em um buffer, mais do que ele é capaz
+de aguentar.
+Quando não há mais espaço do buffer, as informações excedidas
+acabam indo para a memoria da vitima, o que acarreta em sobrecarga
+da memoria e o sistema acabe crashando.
+
+IP Spoofing:
+- Conseguir acesso não autorizado a um computador.
+O intruso envia mensagens para um computador com um IP
+indicando que a mensagem está vindo de um IP diferente do qual na verdade está vindo.
+Se a intenção é ganhar acesso não autorizado, então o spoofed IP será o qual o alvo considerará como
+um host confiavel.
+Para ter sucesso, primeiro, o IP atacante precisa achar
+um endereço IP de uma maquina ao qual o sistema alvo considere como uma fonte
+confiavel. 
+DEpois de obter o IP confiavel, eles podem modificar o packet headers da transmissão
+para parece que os estão vindo do host confiavel.
+Netlog: software de monitoramento.
+
+Session Hijacking:
+- Quando um hacker intercepta uma sessão TCP entre duas maquinas.
+-Man in the middle
+
+ 

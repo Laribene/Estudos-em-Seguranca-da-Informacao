@@ -1,0 +1,54 @@
+VPN:
+- creates a private network over the internet
+- Encrypting all the transmissions
+- Fornece acesso e segurança
+- Modens a cabo, dispositivos celulares, e etc não são seguros. Enviam e recebem dados não criptografados, 
+o que faz com que qualquer pessoa intercepte e visualize os dados trocados. A VPN provides an answer to these issues.
+
+VPN Protocols:
+Encryption need of a VPN. Using certain network protocols. 
+Exist 2 protocols for achieve the encryption needs of a VPN:
+	Where data is encapsulated is referred to as the tunnel.
+	
+	- PPTP(Point-to-Point Tunnelling Protocol):
+	enable the PPP to have its packets encapsulated within IP packets and forwarded over any IP network, including the Internet itself.
+	Less secure than L2TP or IPsec, but it is a secure extension to PPP.
+	Operates at layer 2 of the OSI model
+	Encrypting the data transmissions
+	No encryption
+	To authenticate the user, there are two technologies:
+	-EAP: provides a framework which includes a variety of authentication methods to be used(passwords, tokens, public key)
+	- CHAP: Handshaking. Repet the process. Even after a client connection is authenticated, CHAP repeatdly seeks to 
+	re-authenticate that client, providing a robust level of security
+
+	- L2TP(Layer 2 Tunneling Protocol):
+	Combined with IPSec to achieve a high level of security
+	Improve of PPTP protocol. 
+	Data link layer (2) of the OSI model
+	Less secure than IPsec
+	L2TP and IPSec can be used together.
+	Supports EAP and CHAP and others like:
+	- MS-CHAP: Microsoft extension to CHAP. Compatible with Microsoft Windows. 
+	- PAP: basic form of authentication. allow a user's name and password to be transmitted over the network and compared to a table of name-password
+	pairs.Built into the HTTP protocol. The password in the table are encrypeted but the trasmission of the password is not, because it is in clear text. 
+	- SPAP: More secure than PAP. Username and password encrypted when they are sent. Susceptible to playback attack(replay attack: Transmissão de dados valida é repetida ou atrasada de maneira fradulenta). This is
+	possible because SPAP uses the same reversible encryption method to send the passwords over the wire.
+	- Kerberos: The actual password is never sent. Impossible to intercept because of it. The username is sent , and then the server looks up to the stored hash of that password.
+	Authentication happens with UDP on port 88.
+
+	-IPSec: Used in addition to the IP protocol that adds privacy to TCP/IP communication.Ta presente no Windows e outros SO.
+	Existem 2 tipos de encriptação: Transport(encripta o dado de cada pacote porem deixa o header o qual tem o source e o destino sem criptografia) e o Tunnel(Que encripta tanto o dado quanto o header(Mais lento)))
+	Single-key encryption technology.
+		Provides 2 protocols:
+			Authentication Header(AH): only mechanism for authentication
+			Encapsulating: Data confidentiality and Authentication
+	
+SSL/TLS:
+Novo tipo de firewall usa SSL(Secure Sockets Layer) ou TLS(Transport Layer Security) para prover o acesso a VPN por uma aplicação web.
+Se um site usa SSL ou TLS não quer dizer que vc ta usando VPN. SSL em sites que não usa VPN servem por exemplo para você acessar seus dados bancarios.
+
+
+Pode ser interessante ter uma VPN dedicada para conexões maiores 
+
+Openswan - open source VPN to linux (do not support NAT)
+	

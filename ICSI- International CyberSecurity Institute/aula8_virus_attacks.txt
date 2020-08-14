@@ -1,0 +1,187 @@
+Virus: Self-replicates and rapid spread. Deleting files or 
+changing system settings.Floods the network. Require some human action
+to infect a machine(download a file..)
+
+Worm: It is a type of virus. Can spread without human intervetion. 
+
+How a virus spreads:
+	Spreads in two ways:
+	1- To read your email address book or your email itself. 
+	Outlook é o mais atingido pela sua facilidade de uso.
+	2 -scan your computer for connections to a network , and 
+	then copy to other machines connected to the same network.
+	3- If there are any Computers connected to the affected system, it
+	copies itself to them. This is a worm because does not require user interaction.
+
+Rombertik: malware de 2015. Lia credenciais de usuario em sites. Enviado como anexo em email.
+It overwrote the master boot record.
+As vezes tornava a maquina não inicializavel ou começava a criptografar arquivos no diretório.
+
+Shammon: de 2012. Atingia Microsoft Windows no setor de energia. Roubava dados que parecia
+atingir sistemas em empresas de energia.
+
+Ransomware: The first was the 1989 PC Cyborg Trojan, which encrypted filenames with a weak symmetric
+cipher. After, in 2017, was o WannaCry que atacou os sistem de saude do Reino Unido e atacou os sistemas sem patch do Windows.
+Bad Rabbit.
+
+Types of virus:
+	Macro: 
+	O Office permite que usuários possam escrever mini-programas que são chamados de macros. 
+	Esses macros podem ser escritos como um virus.
+	Outlook permite que programadores escrevam scripts usando a linguagem Visual Basic e 
+	a mesma é incorporada em produtos do Office, e por este motivo,se esses scripts estiverem
+	anexado a um email e o destinatario estiver usando o Outlook, o script poderá ser executado, 
+	fazendo com que um email seja deletado, ou seja feito seu envio e muito mais.
+
+	Setor de inicialização:
+	Infecta sistema de inicialização da unidade e não o SO, sendo mais dificil de eliminar, visto que os antivirus ficam no SO.
+
+	Multipartido: Infecta o setor de inicialização do disco rigido, bem como um ou vários arquivos.
+
+	Residente na memória: 
+	Fica na RAM, desde quando o PC é ligado até quando ele é desligado.
+
+	Blindado: Usa tecnicas que dificulta a analise. Com codigo confuso, e codigo compactado.
+
+	Discrição: virus que tenta se esconder do antivirus.
+	São eles:
+		Infector esparso: Virus esporadico, fazendo suas atividades maliciosas de vez em quando. 
+		Reduzir a frequencia do ataque par areduzir as chances de detecção.
+	
+		Criptografado: Virus é criptografado para não ser reconhecido pelo virus e quando inicia
+		o ataque ele é descriptografao.
+	
+		Polimórfico: Muda de tempos em tempos. Podendo mudar completamente a si próprio.
+
+
+Virus Scanners:
+Work in two ways:
+	1- They contain a list of all knowsn virus files. Doing a periodic update of this files. (.dat file where is this list)
+	O antivirus analisa o assunto do email e seu corpo, além disso eles também analisam anexos para não cairem em falso positivios.
+	O tamanho do arquivo, data de criação e o local são sinais de indicadores de um virus.
+	Deve manter o .dat atualizado e funciona para apenas virus conhecidos.
+	2- Monitorar seu sistema por certo tipos de comportamentos de um virus, como programas que podem alterar arquivos do sistema, alterar
+	registro do sistema, automatizar o software de email ou se multiplicar automaticamente.
+	TSR(Terminate and Stay Resident): procura arquivos que permanecem na memória após a execução.
+	Métodos adicionais empregados por alguns virus: 
+		Verificação de arquivos do SO e o monitoramento desses arquivos, ficando atento e pedindo a permissão quando um arquivo do SO
+		tentar ser modificado.
+
+	Verificação de virus sob demanda: Executa sempre quando vc os inicia.
+	Verificação de virus em andamento:  Executado em segundo plano e sempre verificando.
+
+	Email and Attachment(anexo) Scanning:
+		São extremamentes importantes pq a maioria dos ataques vem de emails.
+		- Some virus scanners examine your email first on the email server before downloading it to your machine.
+		- Other scanning you email and attachments on your computer before passing it to your email program 
+		- To both cases,  the email and its attachmments should be scanned antes de ter a chance de abri-lo e librar o virus no sistema. 
+
+	Download scanning: Verifica os arquivos que vc baixou.
+
+	File Scanning: 
+		Done on-demand. 
+		Do a complete scan of the system periodically. Doing weekly.
+		It looks for known virus signatures.
+		Help with viruses that are copied over a network, deposited on a shared drive, or that are already on your machine before you
+	install the virus scanner.
+
+	Heuristic Scanning:
+		- Most advanced form of virus scanning.
+		- Uses rules to determine which file or program is a virus, and is better to find a virus that is not a known virus.
+		- Não é totalmente eficaz. Leva a falso positivos.
+		- Machine learning to antivirus algorithms.
+
+	Active Code Scanning:
+	- Scanning for active web elements(scripts, ActiveX and so on)
+	- Some sites use Java applets and ActiveX. and then this can be vehicles for malicious code.
+	Scanning objects before they are downloaded is essential feauture
+
+	Instant Messaging Scanning:
+	- Looking for signatures of known viruses or Trojan horse files. 
+
+	Importante notar que se o antivirus que vc estiver usando não tiver essas funcionalidades, 
+	seria interessante trocar de antivirus.
+
+
+Antivirus:
+
+	Algumas coisas devem ser consideradas na hora de se escolher um antivirus: para um empresa ou cliente:
+	-Orçamento.
+	- Vulnerabilidade: Os que baixam mais arquivos da internet e recebe muito email de terceiros, precisa ter
+	uma proteção maior
+	- Habilidade: Quem usa o produto deve-se se observar se ele é capaz de usa-lo
+	- Técnico: Como funciona o antivirus? Quais metodos ele usa para scanner? com que frequencia os arquivos .dat são utilizados:
+	
+	McAffe: for home users and large organisations. (better)
+	Norton Antivirus: for individual computers or for entire networks. It has pre-install scan. (better)
+	Avast Antivirus: It is free for home and non-commercial use.
+	AVG: There is a free version and a commercial version. Integrate with email Outlook.
+	Kaspersky: Comercial e pessoal. Inclui cofre de senha criptografadas para manter suas senhas.
+	Panda: Free and commercial version.  anti -Spyware
+	Malwarebytes: Free and commercial.
+	
+	Antivirus Policies and Procedures:
+	Used with antivirus scanners to increase the protection.
+	- Always use a virus scanner.
+	- Se você estiver receoso sobre um anexo, não o abra.
+	- Considere usar espécies de códigos com os colegas, porque assim eles sabem que é vc. Ou seja, não abra nenhum arquivo sem a palavra chave.
+	- Fique atento a qualquer email que vc envia.
+	- Não faça download de arquivos da internet diretamente. Cuidadosamente escaneie o arquivo e depois passe para o usuário em questão.
+	Se vc baixar faça o seguinte:
+	- Veja se o site de onde vc baixou é confiavel.
+	- Baixe para uma maquina que está fora da internet primeiramente. Então vc scaneia aquele arquivo por virus. 
+	
+Virus Infection and Identification:
+	- Stopping the spread of the virus:
+		- If infection is on WAN, disconnect from that WAN.
+		-  If the infection is on subnetwork, disconnect that subnetwork.
+		- If servers with sensitive data are connected to the infected machine, disconnect the servers.
+		- If backup connected to the infected machine, disconnect them.
+	- Removing the Virus:
+		- Should be certain it is completely clean before putting it back online.
+	- Finding how the Infection Started:
+		- Check if the user of the infected machine download, or send email, or did something like this.
+		- Read documentation about that specific virus.
+		- Check any activity.
+
+Trojan Horses:
+	- Application that appear ser inofensivo, mas tem atividade maliciosa.
+	Common actions made by horse:
+		- Erasing files on a computer.
+		- Spreading other malware, such viruses.
+		- Using the host computer to launch DDoS attacks or sends spam.(most frequent)
+		- Searching for personal information.
+		- Installing back door, to acess the system, creating username and password.(most frequent)
+		- Installing spyware and dropping viruses.
+	Famous types of Trojan Horses:
+		- Back Orifice
+		- Anti_Spyware 2011
+		- Shedun
+		- Brain Test
+		- FinFisher
+		- NetBus
+		- FlashBack
+
+	Trojan Horses Symptoms:
+		- Home page for browser changing
+		- Change to passwords, usernames, accounts
+		- Changes to screen savers, mouse settings, backgrounds.
+		- Device seeming to work on its own
+	
+Spyware or Adware:
+	Spyware:
+		- Pode comprometer algumas informações sensiveis.
+		- Consomem muito do system's resources.
+		- Change yout home page to a different site.(home page hijackers)
+		- add items to your favourites(or read items from them).
+	Difference between Spyware and Adware:
+		Spyware: Obtain information from machine and make it available to another person.
+		Adware: create pop-up ads on machine. These ads are not generated by the web browser, and tradicional pop-up
+		blocker will not stop them.
+	Identify famous types of adware and spyware:
+		- Gator
+		- RedSheriff
+
+Anti-Spyware:(procurar softwares disponiveis)
+	Spyware to be the vehicle for purposeful industrial espionage.
+

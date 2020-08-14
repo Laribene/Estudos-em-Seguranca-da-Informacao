@@ -1,0 +1,35 @@
+Hacking Preparation
+- Passive Information Gathering:
+  Do a passive search about the companie
+Sites like: www.netcraft.com, www.shodan.io and www.censys.io
+can provide information about a target web server or what ports
+are open on the public IP adress of the organisation.
+
+- Active Scanning:
+ Like a connection to the target
+     	- Port scanning: A porta que está aberta pode dizer qual tipo
+de protocolo a pessoa está usando e achar uma vulnerabilidade a partir dali
+	- Enumeration: O atacante tenta achar o que esta na rede do alvo.
+	- Vulnerability assessment: Manualmente acessar vulnerabilidades
+
+Types: Ping Scan, Connect scan, SYN scan, FIN SCAN.
+Qualquer que seja o scan usado, vai deixar rastros no log do firewall e do server.
+
+---------------------------------------------------------------------------------------
+The Attack Phase
+
+Acesso Fisico a maquina
+Bypassing the Password: Invadir Windows ignorando a senha usando um Linux
+Ataques de acesso remoto:
+- SQL Injection
+- XSS (Cross-Site Scripting): Invasor injeta um script
+do lado do cliente em páginas da web. De uma maneira que executa fragmento de JavaScript
+preparado pelo invasor no contexto de segurança do dominio de destino.
+
+
+Hackeando Wifi:
+Jamming: ataque DOS a uma rede sem fio
+De-authentication:
+WPS attack: WPS uses a PIN to connect to the wireless access point. The WPS attack intercept
+that PIN in transmission, connect to the WAP and then steal the WPA2 password.
+Cracking the password: Breaking the encryption

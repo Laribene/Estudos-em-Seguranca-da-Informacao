@@ -1,0 +1,98 @@
+ISO Standards
+For network security:
+ISO 27002:  Information Security Controls
+ISO/IEC 27000:  Information technology — Security Technology
+ISO/IEC 15408:  The Common Criteria for Information Technology Security Evaluation
+ISO/IEC 25000:  Systems and Software Engineering
+ISO/IEC 27001:  Information Security Management
+ISO/IEC 27005:  Risk Management
+ISO/IEC 27006:  Accredited Certification Standard
+ISO/IEC 28000:  Specification for security management systems for the supply chain
+ISO 27003:  ISMS Implementation
+ISO 27004:  IS Metrics
+ISO 27005:  Risk management
+ISO 27006:  ISMS certification
+ISO 27007:  Management System Auditing
+ISO 27008:  Technical Auditing
+ISO 27010:  Inter-organisation communication
+ISO 27011:  Telecommunications
+ISO 27033:  Network security 
+ISO 27034:  Application security
+ISO 27035:  Incident Management
+ISO 27036:  Supply chain
+ISO 27037:  Digital forensics
+ISO 27038:  Document reduction
+ISO 27039:  Intrusion prevention
+ISO 27040:  Storage security
+ISO 27041:  Investigation assurance
+ISO 27042:  Analysing digital evidence
+ISO 27043:  Incident Investigation
+
+
+
+NIST Standards
+- NIST SP 800-14
+Common security principles that should be addressed within security policies.
+8 principios e 14 práticas que podem ser usadas para desenvolver politicas de segurança.
+8 principios são:
+1) Computer security supports a missão da organização
+2) Computer security componente integrante de boas gestão
+3) Computer security deve ser economica
+4) Os propriestarios do sistema tem responsabilidades de segurança fora de suas organizações
+5) Responsabilidades pela segurança do computador devem ser explicitadas
+6) A segurança do computador requere aborgame abrangente e integrada
+7) A segurança do computador deve ser reavaliada periodicamente
+8) A segurança do computador é limitada por fatores sociais.
+
+- NIST SP 800-35
+Guia de serviços de Segurança de Tecnologia da Informação.
+Seis fases do ciclo de vida da segurança de TI:
+1) Iniciação:
+A organização está procurando implementar um serviço, dispositivo ou processo de segurança de TI.
+2) Avaliação:
+Determinar e descrever a postura atual de segurança da informação. Usar métricas quantificáveis.
+3) Solução:
+Varias soluções são avalidas e uma ou mais são selecionadas.
+4) Implementação:
+O serviço e afim é implementado
+5) Operações:
+Operação e manutenção continua do serviço, dispositivo, ou processo de segurança.
+6) Encerramento: 
+Tudo que foi implementado na fase 4 será concluido. Ocorre quando o sistema é substituido por um melhor ou novo.
+
+- NIST SP 800-30 Rev.1
+Guia para a realização de avaliações de risco.
+Etapas:
+1) Caracterização do sistema
+2)Identificação de ameaças
+3)Identificação de vulnerabiidades
+4)Analise de controle
+5) Determinação da probabilidade
+6)Analise de impacto
+7)Determinação de risco
+8) Recomendações de controle
+9)Documentação de resultados
+
+
+PCI DSS:
+Padrão de segurança de dados da indústria de cartões de pagamento, é um padrão de segurança de informações
+proprietário para organizações que lidam com informações do titular do cartão para os principais cartões de crédito e débito,
+como VISA e MasterCard.
+
+Objetivos:
+1- Todos os comerciantes devem proteger as informações do titular do cartão.
+Instalando um sistema de firewall e roteador.
+- Altere todas as senhas padrões.
+2- Os dados do titular do cartão são quaisquer informações pessoais sobre o titular do cartão que se encontram no cartão
+de pagamento e nunca podem ser salvas por um comerciante. 
+Slavar numero da conta em formato criptográfico.
+- Informações devem ser criptografadas ao transmitir os dados por redes públicas, como a Internet.
+3- Software antivirus deve estar presente em todos os computadores associados a rede.
+- Comerciantes devem instalar patches de segurança.
+4- Como comerciante, vc deve limitar a acessibilidade das informaçoes do titular do cartão. Instalar senhas para que funcionários não acessem dados
+do cartão de outras pessoas.
+- Rastrear atividades dos funcionários dando uma senha diferente para cada.
+- Mantenha registros de visitantes
+- Use analisador sem fio para verificar se há pontos de acesso sem fio para evitar acesso não autorizado. Certificar que os IPS/IDS estão atualizados.
+
+

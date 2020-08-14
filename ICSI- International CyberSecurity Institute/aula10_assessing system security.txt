@@ -1,0 +1,138 @@
+Avaliação de Risco(Risk Assessment):
+- Considerar o ativo q vc ta tentando proteger
+- As ameaças do ativo
+- Vulnerabilidade em seu sistema
+- Medidas p protege-lo
+
+
+Expectativa de perda/ Impacto que uma unica perda causará: SLE
+Valor do Ativo: AV
+Fator de Exposição/ Valor em porcentagem, do quanto o valor do ativo você perderá em um incidente: EF
+
+
+Se um laptop comprado por 800, e se depreciar 10 porcento ao ano, resulta em um fato de exposição de 0,9, o LES do
+laptop roubado ou perdido será
+
+800 x 0,9
+
+Expectativa de perda anualizada(ALE)/ quanto perda esperar de um problema em um ano.
+
+ALE=  SLE X ARO (Taxa de ocorrencia anual)
+
+Se vc acha que pederá  seis laptops por ano, então:
+
+ALE = 720 x 6
+
+
+
+
+
+
+Respostas ao risco:
+- Mitigação: Medidas para diminuir o risco. Executar um antivirus por exemplo
+- Prevenção: Significa que vc tem zero riscos. Por xemplo, evitando que alguem não acesse a web.
+- Transferência: Transferir o risco p/ outra pessoa.Por exemplo, companhia de seguros.
+- Aceitação: Se a probabilida do risco for remota ou o custo para mitigar muito alto, vc aceita o risco.
+
+
+Realizando uma avaliação inicial:
+Six Ps:
+-Patch(Correção)
+Ver se tem rotina para acompanhar a atualização de todos os patches.
+Ver se tem patches e atualizações atuais
+Politica por escrito
+
+-Ports
+11-1024 são usadas por protocolos conhecidos.
+Important that ports that is not been used be closed and communication should be disallowed on this port.
+Acham que só pq o firewall ta ativado, não é necessario fechar portas, porem é sim.
+Algumas portas são associadas a serviços, como o FTP(21 and 20), porem se o serviço não ta sendo usado, ele deve ser desativado junto com a porta.
+
+- Protect
+Ter pelo menos um firewall entre sua rede e o mundo exterior.
+Firewall de inspeção de pacotes
+Possuir um IDS no firewall e em qualquer servidor web.
+Ter antivirus atualizado
+Ter um anti-spyware(para impedir que executem spyware na rede)
+Servidor proxy ou NAT, para ocultar seu endereço IP interno, permite que quais sites os usuários visitam,
+alem de permitir filtros em alguns sites.
+Para proteger dados transmitidos para fora da rede, use uma VPN, que faz a criptografia dos dados.
+
+-Policies
+-Probe
+-Physical
+Garantir que o equipamento ta em local seguro
+Server: menos pessoas possiveis
+Backup: Gurdadas em um cofre a prova de fogo. E Backups antigos tem que ser exterminados
+Acesso a roteadores e switches devem ser limitados
+
+Servidor: Em uma sala a prova de fogo. Um login pra quem entrar e sair ou bloqueios eletronicos.
+Estação de trabalho: marca de estações de trabalho com marca de identificação gravada.
+Equipamentos diversos: mantidos trancados com chaves.
+
+Para epresas com dados confidenciais importantes:
+- Bloqueio biometrico para sala de servidores e salas de equipamentos
+- Visitantes do edificio estão conectados e acompanhados por alguem o tempo todo.
+- Malas inspecionadas quando o pessoal sai.
+- Nenhum dispositivo que pode registrar dados é permitido no local. USB e afins
+- Toda impressão é registrada
+- Todas as cópias são registradas.
+
+
+
+Sondando/ Varrendo a rede:
+- Importancia do teste de vulnerabilidade
+3 testes para avaliar a rede:
+- Verificaçao de portas: Não deixar portas desnecessárias abertas. Tem 1024 portas, e outras 65.535. 
+- Enumeração: Invasor tenta ver o que está na rede de destion. Pastas, contas de usuários e afins. Porque
+isso pode fornecer um ponto de ataque.
+- Avaliação de vulnerabilidade: Usada para ver vulnerabilidade conhecida.
+Scanners de vulnerabilidade mais famosos, Nessus, Qualys, Openvas, Netsparker, Acunetix, Nexpose Community, Retina and Core Impact.
+
+
+
+
+
+Vulnerabilidade:
+Brecha que um hacker pode explorar
+
+CVE: Commom list of vulnerabilities. 
+Provide a commom name and description for a vulnerability.
+CVE prefix + Year + Arbitrary Digits
+
+NIST: National Institute of Standards and Technology maintains
+a database of vulnerabilities. Uses the CVE format
+
+OWASP: The Open Web Application Security Project is the standard
+for web application security.
+Every year a new 10 web application vulnerabilities list is published.
+
+
+
+
+Documenting Security:
+
+Physical Security Documentation
+- Fazer um documentação com a localização das maquinas(incluindo servidores, roteadores e afins)
+- Fazer lista de quem possui acesso a tal local
+- Fazer o seguinte: para locais que precisa de acesso irá gerar logs, esses logs devem ser apagados em algum momento
+e vc escolhe quando.
+
+Politica e documentação de pessoal
+- Politicas devem estar em um arquivo.
+- Contrato para os funcionarios dizerem que estão de acordo(manter cópia do mesmo)
+-Lista de quais itens os funcionarios tem acesso e qual o nivel de acesso.
+
+Documentos de teste:
+- Relatorio de auditoria interna e externa devem ser arquivadas.
+- Devem incluir falhas encontradas e relatório de acompanhamento para saber quais medidas serão tomadas para corrigi-las.
+- Indicar qual foi o incidente de segurança, quando ocorreu, quais maquinas foram afetadas e como foi corrigido.
+
+Documentação de proteção de rede:
+- Qual firewall está usando e como esta configurado?
+- Qual IDS está usando e como está configurado
+- Qual antivirus e/ ou anti-spyware esta usando
+- Configurou algum honeypos?
+- Que medidas de segurança de maquinas individuais tomou?
+
+Esses documentos devem ser mantidos em cofre com chave

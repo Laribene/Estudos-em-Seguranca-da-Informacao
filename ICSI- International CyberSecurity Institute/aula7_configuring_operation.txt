@@ -1,0 +1,137 @@
+Configuring Windows:
+- Do not use default adminstration login
+- Shoud use an administrator account that has a username that not indicate its purpose
+but it is better when you create a new account that you can give administrative privileges.
+- Fazer varias contas com privilegios administrativos, ou que parecem ter privilegios administrativos
+Account that should be pay attention of:
+	- IUSR_Machine name: Advisable to alter it in the manner suggested for the administration account.
+	- ASP.NET: hacker with familiar with .NET, could target this account.
+	- Database accounts: SQL Server and similar, create default account. the hacker could target these account
+Always give least acess necessary for that person to do her job. This concept is often called least privileges, and is a cornerstone of security.
+
+	Setting Security Policies:
+	About the individual machines' policies
+		-Politicas de senhas seguras:
+		Historico de senhas: Quantas senhas o SO se lembra, a fim de impedir o usuario de reutilizar senhas (Segundo a NSA recomendavel 5 senhas)
+		Idade máxima da senha: Recomendado pela NSA 42 dias
+		Idade minima de senha: 2 dias
+		Comprimento minimo : 12 caracteres(NSA) e 8 (Windows)
+		Senhas devem atender aos requisitos de complexidade:(NSA diz q sim e Windows diz q não)
+		
+	If network stores and processes highly sensitive data and is an attractive target to hackers,
+	you must always skew your policies and settings towards maximum security.
+	
+	Account Lockout Policies:
+	At Windows, a politica default de bloqueio de conta é insegura, pois , essas politicas
+	determinam quantas vezes um usuário pode tentar efetuar login antes de ser bloqueado, além de quanto tempo ele 
+	deve ser bloqueado. Ou seja, ele permite que vc faça varias tentativas de login sem ser bloqueado, e assim consiga ter
+	acesso ao sistema.
+	A NSA recomenda: Duração de bloqueio da conta de 15 horas; Limite de bloqueio de conta de 3 tentativas; Redefinir conta depois 30 minutos.
+	
+
+	Configurações de registro:
+	Database containing system settings
+	Windows Registry:database store setting and options for Microsoft Windows operating systems
+	Contain critical information and settings about hardware, software..
+	Do not change anything if you don't know about it.
+
+	Registry Basics:
+	Windows 95 - 98:they are hidden, and called USER.DAT and SYSTEM.DAT
+	Windows XP: %SystemRoot%System32\Config.
+	Windows 8: file named ntuser.dat
+	
+	You need to use a tool called regedit32.exe or regedit.exe to edit this files.
+	Referred to as a database but it is different from it.
+	Has hierarchical structure
+	Toview registry, go to Start, Run and type regedit.
+	It has 5 main folders:
+		- Classes_root:all your file association types.
+		- Current_user: links to the Users for the user who might logged on to the PC
+		- Local_machine:about type of the hardware
+		- Users: individual preferences for each user.
+		-Current_Config: links to the Local_Machine, and current harware configuration.
+	Specific entry in the Windows Registry is referred to as a key. If alter the registry, change the settings of particular key.
+
+	Restrict Null Session Acess:
+	Null Session is Windows ways of designating anonymous connections.
+	São um risco para o computador. Definir o valor como "1" restringe o acesso de sessão nula de usuários não autenticados a todos os pipes e compartilhamentos do servidor excetos os listado no NullSessionPipes e entradas NullSessionShares.
+	Caminho da chave: HKLM\SYSTEMZ\CurrentControlSet\Services\LanmanServer
+	Ação: Verifique se está definido como: valor = 1
+	
+	Restringir acesso a sessão nula por meio de pipes nomeados:
+	Restringir o acesso impede o acesso não autorizado pela rede.
+	Caminho da chave: HKLM\SYSTEMZ\CurrentControlSet\Services\LanmanServer
+	Ação: Ecluir todos os valores
+
+	Restringir acesso anonimo:
+	Registro de acesso anonimo permite que usuários anonimos listem nomes de usuario de dominio e enumere nomes de compartilhamento, por isso deve ser desligado
+	0 -Permitir anonimos
+	1- Restringir anonimos
+	2- Permitir usuarios com permissoes anonimas explicitas
+	Caminho da chave: HKLM\SYSTEM\CurrentControlSet\Control\Lsa
+	Ação: Definir Valor = 2
+
+	Acesso remoto a registros:
+	Bloquear o acesso remoto a registros, porem limitar em casos onde administradores utilizam o registros.
+	1- Adicione a chave ao registro: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurePipeServers\winreg
+	2- Selecione winreg, clique no menu Segurança e , em seguida, clique em Permissões.
+	3- Defina a permissão do administrador como Controle total, verifique se nenhum outro usuário ou grupo está listado e clique em OK.
+	Valor recomendado = 0.
+
+	Serviços:
+	Deverão ser desligados se não utilizados.
+	FTP Service, Internet Information Services são bons serviços.
+
+	Sistema de arquivos com criptografia:(EFS)
+	Utilize Public key encryption
+	EFS: Cada arquivo é criptografado usando uma chave de criptografia de arquivos gerada aleatoriamente, independente do par de chaves publica/ privada de um usuário. 
+	O metodo torna resistente a muitas formas de ataques.
+	
+	Modelos de segurança:(ALGO BEM IMPORTANTE)
+	Maneira de simplificar os aspecto da segurança do sistema operacional. Contém centenas de configurações possiveis para controlar um ou varios computadores.
+	- Podem controlar areas como direitos de usuário, permissões, e diretivas de senha e permitem que os adms implantem configurações centradas por meio de GPOs
+	Tem modelos de segurança no Windows e está na pasta Windows\Security\Templates.
+	Hisecdc.inf: aumentar segurança e comunicação com os controladores de dominio.
+	Hisecws.inf: aumentar segurança e comunicação dos PC dos clientes e servidores membros.
+	Securedc.inf: // com controladores de dominio, mas não de alta segurança
+	Securews.inf: // de qualquer PC ou servidor do cliente
+	Setup security.inf: Retornar configuração para a padrão.
+	
+Configuring Linux:
+	- A linux system has a repository of packages available to be installed on the system
+	- It has root instead of admin
+	- Blocking acess to programs such as shutdow, reboot, for regular users on your server
+	- Hide your system information.
+
+	Commands:
+	ps or ps ax = see running services
+	man ps =  see documetation of ps
+	rc or init = disable services (but has system which uses the command 'systemd')
+	kill = stop any service that is running during that specific time
+	service start sshd or service sshd stop= stop or start the sshd service
+
+	File Integrity:
+	File integrity management, it is to monitor key files on the file system and alert the adm if that file was changed.
+	Open source tools: Samhain and OSSEC
+	ro = somente leitura
+	
+	Patches or updates:
+	Corrections to their code, because of flaws that might exist.
+	Update is necessary.
+	Applying patches means that the operating system, database management systems, development tools, Internet browsers and so on are all checked for patches.
+	It has to ensure that all patches are up to date, and set up a system to ensure that they are kept up to date.
+	There are automated solutions that will patch all systems in your organisation.
+
+		Automated Patch Systems:
+		- Windows Update:
+		Disadvantages: No updates other types of applications.
+		Not provide check patches on a test machine before deploying them to the entire network.
+		Advatages: It is free and integrated with the Windows operating system.
+		
+		-Unix/Linux software updates:
+
+		Core Operating System Updates:
+		Keep the operating system update, differ from that of the applications.
+		-Binary update: Require less work and are fast to install. Precompiled binary executables and libraries that are copied to disk
+		-Update from source: Open source operating system favour updates from source. Takes more time and more complex.
+
