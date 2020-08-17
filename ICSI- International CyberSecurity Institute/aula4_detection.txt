@@ -1,0 +1,88 @@
+IDS Concepts
+- Pre-emptive blocking: prevent intrusions before they occur. It observe any danger signs of 
+imminent threats and then blocking the user or IP address from which these signs 
+originate. 
+Disadvantage of this method type is because can block a legitimate user by mistake for example.(false positive)
+A software alert the administrator that suspicious has taken place. A human administrator
+choose if he blocks the suspicious adress or not. Doing it, you run the risk of blocking out legitimate users.
+This is not the entire strategy.
+
+- Anomaly Detection:
+	- Trace back
+Detect intrusion and then notify the administrator.
+Any activity that does not match the pattern of normal user access is noted and logged.
+The software compares observed activity against expected normal usage profiles. 
+Profiles: developed for specific users, groups of users or applications.
+	- Threshold Monitoring:
+	Monitor acceptable behaviour levels and observer whether these levels are exceeed.
+		-Failed login attempts
+		- amount of data the user downloads.
+		-monitoring the time a user is connected.
+	High rate of false positive in which the system misidentifies normal usage
+	as a attack
+	
+	- Resource Profiling:
+	Measures the system-wide use of resources and develops a historic usage profile. 
+	Looking at how a user normally utilizes system to identify usage that are outside normal parameters.
+	It is difficult to interpreter the meaning too, because an increase in usage might indicate something 
+	benign like an increased workflow rather than an attempt to breach security.
+
+	- User/Group Work Profiling 
+	IDS maintains individual work profiles about users and groups.
+	These user and groups are expected to pbey these profiles. 
+	There are short-term profiles: capture recent changing work patterns,
+	long-term profiles: view of usage over an extended period of time.
+	Difficults about the two profiles: Profiles that are defined too broadly, and too narrowly
+
+	- Executable Profiling: Measure and monitor how programs use system resources, attention to whose activity
+	cannot be traced to a specific originating user.
+	Privileges of the user executing the software.
+	The mothod notify the administrator, such as by network message or email.
+
+-Components of an IDS:
+	-activity: element of data source
+	-administrator: security
+	-Sensor: collects data and pass to the analysis
+	- Analyser: analyses the data collected by the sensor
+	-An alert: message of analyser 
+	- Manager: used to manage, example console.
+	-Notification: IDS manager makes the operator aware of an alert
+	- Operator: often the administrator. 
+	- An event: occurence indicates a suspicious activity may have occured.
+	- Data source: raw information that the IDS uses to detect suspicious activity.
+
+IPS: active IDS, Stop any traffic that is malicious. 
+passive IDS, only detect. 
+The problem with active IDS and IPS is the false positive
+Single machine: HIDS and HIPS
+Network segment: NIDS, NIPS
+
+Types of IDS:
+	Snort: Open source IDS. Installed on server. Works with Host-based firewall. 
+	Three modes: Sniffer, packet logger, network intrusion-detection.
+
+	Sniffer: The console(shell) display a continuos stream of the contents of all packets coming
+	across that machine> Good way to check whether transmissions are encrypted.
+
+	Packet Logger: Similar to sniffer mode. The difference is that the packet contents
+	are written to a text file log rather than displayed in the console.
+
+	Network Intrusion Detection:
+	Snort uses a heuristic approach to detecting anomalous traffic. 
+	Using the shell.
+	Snort is good use in conjunction with host -based firewall or as an IDS  on each server to provide additional security.
+
+	Cisco Intrusion Detection and Prevention:
+	
+Honeypots: 
+simulate a server, to attract and probably identify intruders.
+Everyone who try to connect to a honeypots machine is considered an intruder
+ 	- Specter: software honeypot solution.
+		-logs all traffic to the server for analysis.
+		- It has five modes: Open, Secure, Failing, Strange, Aggressive: trace the attacker and gain its identity
+	
+	- Symantec Decoy Server: Simulated a real server by simulating many server functions,
+	such as incoming and outgoing e-mail traffic.
+		- works as a honeypot and an IDS. 
+		- It is used together with Symantec's antivirus software, firewall software and antispyware
+

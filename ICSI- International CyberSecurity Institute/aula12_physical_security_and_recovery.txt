@@ -1,0 +1,103 @@
+Physical Security and Recovery
+Monitoring cameras and alarm, secure machines..
+
+Equipment Security:
+- Locked door on the server room
+- Controlling who has access to that room.
+- Should be fireproof
+- routers and switches não devem estar tão acessiveis
+- acesso remoto a celulares perdidos ou furtados
+
+Securing building access
+- Duas portas para entrada de pessoas com dois metodos dife
+rentes entre elas para que a pessoa consiga entrar.
+- Fazer um estacionamento com muitas curvas para evitar fulgas
+- Deixar o predio bem iluminado a noite
+
+Monitoring:
+- Colocar cameras excelentes, garantindo a segurança da mesma
+ e em lugares estratégicos
+
+Fire Protection:
+- É importante ter um para garantir que documentos, e afins
+não sejam perdidos
+
+
+--------------------------------------------------------------------
+
+Disaster Recovery:
+ Qualquer evento que pode causar um disrupt para as operações
+de sua organização é classificado como desastre.
+
+Disaster Recovery Plan:
+A empresa deve ter um DRP para conseguir voltar as operações normais o mais rapido possivel.
+	Se um desastre ocorre, quem na organização quem tem a tarefa de fazer essas coisas?
+	- Locating alternative facilities
+	- Getting equipment to those facilities
+	- Installing and configuring software
+	- Setting up the network at the new facility
+	- Contacting staff, vendors, and customers
+Há muito mais coisa do que isso!!
+
+
+Business Continuity Plan:
+Fazer com que funções de negocio minimas voltem a funcionar até certo nivel
+para conduzir o negocio
+Nesse caso deve ser feito levantamento quais sistemas são mais criticos para 
+o seu negocio e ter um plano alternativo no caso de esses sistemas falharem.
+Não precisa ser perfeito o plano, mas funcional.
+
+
+Determinando o impacto nos negócios:
+Antes de fazer um DRP ou BCP deve ser feito um BIA(impacto de negócio).
+BIA serve para saber quais danos a organização um determinado desastre pode causar.
+Faça uma planilha com desastres prováveis e conduz uma analise basica do impacto
+nos negocios para cada um.
+Métricas importantes:
+- MTD: Tempo de inatividade máximo tolerável/ Quanto tempo pode ficar inativo antes que o efeito
+seja catastrofico.
+-MTTR: Tempo médio de reparo / Quanto tempo levará para reparar um determinado sistema se ele estiver inativo? 
+-MTBF: Tempo médio entre falhas / Frequencia que esse serviço ou dispositivo falha?
+(MTD e MTTR e MTBF)todos esses dados levarão a um objetivo de tempo de recuperação(RTO)/ Tempo que vc pretende
+ter um serviço de volta em operação, casa haja uma falha.
+- RPO: Ponto de recuperação/ quantidade de dados que você pode tolerar perder.
+
+
+Teste de Recuperação de disastre:
+(Para testar a integridade do backup, a compania deveria restaurar o backup)
+Quando vc tem DRP e o BCP você precisa testa-los para ver se eles estão trabalhando como esperado.
+Tem 5 testes para garantir isso:
+1) Document Review/Checklist 
+- Feito por um individuo.
+- BCP e DRP são só revisados e comparados a check lists de varios padrões(como PCI).
+2) Passo a Passo / Mesa
+- Feito pela equipe
+- Analisa o BCP e DRP e discute cenários.
+3)Simulação
+Simular algum tipo de desastre. Por exemplo, com o cara de BD.
+4)Paralelo
+Verificar os sistemas de backup se ficam online e afins.
+5) Corte/ Interrupção total
+Etapa final para ver na pratica se o BCP/DRP funciona.
+Faça essa etapa em momento que a empresa não trabalha.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Fault Tolerance(Tolerancia a Falhas)
+- Backup is the most way of having fault tolerance for a server.
+From a security point of view, three-primary backup types are:
+- Full: All changes
+- Differential: All changes since last full backup
+- Incremental: All changes since last backup of any type
+O  tipo de backup que a empresa escolher vai depender do tipo da empresa e afins.
+
+RAID: Redundant array of independent disks. (permite que seu servidor tenha mais de 
+um hard drive, então se o principal falha se tem o outro)
+
+
+
+
+
+
+
+

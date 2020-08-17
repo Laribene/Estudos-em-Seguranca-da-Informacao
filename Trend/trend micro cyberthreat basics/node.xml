@@ -2,7 +2,7 @@
 <node>
 <version>6</version>
 <dict>
-  <key>expanded</key><true/>
+  <key>expanded</key><false/>
   <key>title</key><string>Trend Micro Cyberthreat Basics</string>
   <key>nodeid</key><string>f310079c-ebbe-4f90-8f71-b2fe5900e5cb</string>
   <key>modified_time</key><integer>1596807360</integer>

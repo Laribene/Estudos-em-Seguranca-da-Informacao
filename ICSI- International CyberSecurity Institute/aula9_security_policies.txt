@@ -1,0 +1,81 @@
+User Policies:
+	- Mau uso do sistema
+	- Boas politicas de sistema
+	- oia(Frases como "Computadores e o acesso a
+	internet são só para uso empresarial ")
+
+	User policies must cover:
+	- Passwords
+		Problemas como tamanho minimo de senha, histórico de senhas e complexidade
+		de senhas estão sujeitos a politicas administrativas, não politica de usuário.
+		Policies:
+		- Password are never to be kept in written form and accessible place.
+		- Do not share your password.
+		- If employee believes that his password has been compromised, contact the IT and then
+		the old password and hany logon attempts should be monitored.
+		- Use a password that is difficult and relative easy to remember
+	Rainbow table: 
+		Hacking hashing passwords. All the possible hashes of all the key combinations
+		that might have been used in a password.
+		OphCrack inicializam no Linux e executa a tabela arco-iris no arquivo SAM(que contem as senhas hash do Windows)
+		Nenhuma tabela arco-iris podem lidar com senhas de 20 ou mais caracteres.
+	- Internet use
+		The organization need to specify whats is and what is not acceptable during use of the web inside working hours.
+		Proxy servers and firewalls
+	- E-mail attachments
+		Users should open an attachment only:
+		- It was expected
+		- If It was not expected, first contact that person and ask if they sent the attachment
+		- Appears to be a legitimate business document
+		Users should not open an attachment only:
+		- Comes from an unknown source
+		- It is some active code our executable
+		- It is an animation/ movie
+		- The email does not appear legitimate
+	- Software installation and removal
+		Usuários não deve poder salvar nada no seu pc
+		Restringir acesso(NAC)
+	- Instant messaging
+		- May be use for business communications, no personal conversations.
+		- Nenhuma informação comercial confidencial deve ser enviada por mensagem instantânea.
+	- Desktop configuration
+		- 
+	- BYOD(Bring your own Device)
+		Has a Wi-Fi network that is dedicated to BYOD and is not connected to the company's main network.
+		Limitar acesso a aparelhos que não são da empresa
+		Choose your own device(CYOD)
+		Company Owned and Provided Equipment(COPE): Company provides the device
+		Necessary have a policy regarding personal devices.
+
+System Administration Policies:
+	Procedure to adding users, removing users, dealing with security issues, changing any system.
+	
+	New Employees:
+	- Devem ser acesssos a recursos e aplicativos que sua posição exige.
+	- Deve receber uma cópia das politicas de segurança/ uso aceitavel da empresa.
+	- Documento deve ser assinado atuando como confirmação do recebimento da confirmação.
+	- Antes do funcionario entrar, adm de redes deve receber solicitação por escrito com os 
+	recursos que o usuário precisa e quando é iniciado.
+	- Deve ter tambem a assinatura de alguém na unidade de negocios com autoridade para aprovar a solicitação.
+	- A pessoa que gerencia a segurança da rede deve aprovar e assinar a solicitação.
+	- depois disso arquive uma cópia da solicitação.
+	
+	Leaving Employees:
+	Deve garantir essas coisas quando o empregado for embora:
+	- All accounts to any server, VPN, network or other resources are disabled.
+	- All keys to the facility are returned.
+	- All accounts for email, Internet access, wireless Internet, cell phone are shut off
+	- Any account for mainframe resources are cancelled
+	- The employee's' workstation hard drive is searched
+
+	Change Requests:
+	Change control process devem seguir:
+	- Um gerente dentro da unidade de negócio assina a solicitação significando aprovação.
+	- A unidade de TI apropriada verifica se a soliticação pode ser atendida(do ponto de vista orçamentário/comercial)
+	- A unidade de TI verifica se a alteração não causará problema de security
+	- A unidade de TI formula plano para implementar mudança e para reverter mudança se for preciso.
+	- Data e hora da alteração agendadas e todas as partes relevantes notificadas.
+
+Access Control:
+Goal is to make the data is accurate, confidential, and available only to authorised parties.
+Least privileges	

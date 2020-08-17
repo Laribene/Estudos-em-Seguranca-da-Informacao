@@ -1,0 +1,103 @@
+Cifras de substituição polialfabética:
+
+-Escolha uma palavra-chave (no nosso exemplo, a palavra-chave será "MEC").
+
+-Escreva sua palavra-chave na parte superior do texto que você deseja codificar, repetindo-a quantas vezes for necessário.
+
+-Para cada letra, observe a letra da palavra-chave acima dela (se for 'M', vá para a linha que começa com 'M') e encontre essa linha na tabela Vigenere .
+
+-Em seguida, encontre a coluna da sua carta de texto sem formatação (por exemplo, 'w', portanto a vigésima terceira coluna).
+
+-Por fim, trace essa coluna até chegar à linha que você encontrou anteriormente e anote a letra na célula onde elas se cruzam (nesse caso, você encontra um 'eu').
+
+exemplo:http://pi.math.cornell.edu/~mec/2003-2004/cryptography/polyalpha/polyalpha.html
+
+Palavra-chave:	MECMECMECMECMECMECMEC M
+Texto simples:	wemeedmoresuppliesfas t
+Texto cifrado:	IIPQIFYSTQWWBTNUIUREU F
+
+Rail Fence:
+
+attack at dawn:
+
+a   tc  a  dw
+  ta   k   ta  n
+
+Larissa Benevides
+
+L    as  a   ee  i   e
+  ri   s   Bn   v  ds
+
+Vigenere:
+ +2, -1, +1, +3:
+attack
+a (1) +2 = 3 or C
+T(20) - 1 = 19 or S
+..
+
+Enigma.
+
+Modern Encryption:
+	-Symmetric encryption: same key used to encry and descry.
+		- Binary Operations:
+		- DES: Data Encryption Standard : Divididos em blocos de 64 bits e esses blocos são reordenados.
+			Como transmitir a chave quem q ela seja comprometida?
+		- Data Encryption Standard:
+		- Blowfish: Funciona em blocos da mensagem de cada vez. Chave de comprimento variavel 32-448 bits.(Gratuito)
+		- AES: Advanced Encryption Standard:Algoritmo Rijndael. 3 tamanhos de chave, 128,192,256 bits. Cifra de bloco. 
+	
+	- Public Key Encryption(criptografia assimetrica):
+		A chave publica(qualquer pessoa pode ter acesso) é usada para criptografar uma mensagem ao destinatário e a chave privada(mantida segura e privada)
+		pode descriptografa-la.
+		- RSA: O nome é derivado dos 3 matematicos q o criou. Mais lento q as cifras simétricas. Não tem problema com compartilhamento de chave.
+		-Elliptic Curve
+	- Digital Signatures and Certificates:
+		Digital Signatures: garante quem enviou a mensagem e não sua 
+		confidencialidade. Não-repudio.(uma pessoa ou entidade não pode 
+		negar a autoria da informação fornecida). Prova quem é o remetente.
+		- Digital Certificates: Contem chave publica e alguns meios para verificar de quem é a chave publica.
+		X.509: certificado mais utilizado no mundo.
+		Validar the sender de uma assinatura digital ou software
+		- PGP Certificates
+		
+
+- Hashing:
+	- EFS: Encrypting File System(For Windows) Encode Files
+	- NTLM
+	- BitLocker: Encrypting the hard drive (Windows)
+	- LUKS: Linux Unified Key Setup(Linux)
+	-Recebe uma entrada de tamanho varivael 'm', e retorna uma
+string de tamanho fixo, ou seja, o hash tem sempre o mesmo tamanho.
+	- Livre de colisões:Dois valores de entradas diferentes não produzem a mesma saida.
+	- Salt: bits aleatorios que são usados como entradas para o hash.
+
+-MD5:
+	- Não é resistente a colisões.
+
+-SHA:
+	- Seguro e sem colisões
+	-SHA1: 160 bits e parecido com o MD5.
+	-SHA2: Duas funções de hash semelhantes(SHA256(usa palavras de 32 bytes) e SHA 512(usa palavras de 64 bytes))
+	- SHA3
+
+Cracking Passwords:
+
+-John the Ripper:
+	-Arquivos de senha
+	- Indentifica qual algoritmo de criptografia foi utilizado para cifrar as senhas presentes no arquivo que foi indicado
+	(arquivo este que está contido no windows e no linux) e conseguir quebra-las.
+	- john passwd
+	- john -wordfile:/usr/share/wordlist/rockyou.txt -rules passwd
+- Rainbow tables
+	-Hashes pré-calculados de todas as senhas disponiveis.
+	- Tenta encontrar uma correspondencia do hash, para que assim o texto original seja encontrado.
+	-Ferramentas que utilizam rainbow tables: Ophcrack
+
+-Força bruta:
+	- Tentar todas as chaves possiveis. 
+	- Inviavel para criptografias mais complexas.
+
+
+
+
+

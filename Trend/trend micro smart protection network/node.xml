@@ -2,7 +2,7 @@
 <node>
 <version>6</version>
 <dict>
-  <key>expanded</key><true/>
+  <key>expanded</key><false/>
   <key>title</key><string>Trend Micro Smart Protection Network</string>
   <key>nodeid</key><string>10dfc15e-69c7-4b6b-8c8b-02cebd67856f</string>
   <key>modified_time</key><integer>1596805834</integer>
