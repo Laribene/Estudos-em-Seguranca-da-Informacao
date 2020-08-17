@@ -1,0 +1,64 @@
+- Loopback address: The IP adress 127.0.0.1 is designates to the machine you are on.
+- Subnet mask: 
+	- Classe C: 255.255.255.0
+	- Classe B: 255.255.0.0
+	- Classe A: 255.0.0.0
+
+- Uniform Resource Locator: URL
+- DNS: make the process of translating the IP adress to the URL
+
+-Emails Protocols: 
+	-IMAP: port 143
+	-POP3
+	
+-ARP: protocol responsible to convert IP addresses to MAC addresses.
+
+-Protocols: 
+	- FTP:Transferring files between computers - 20 /21
+	-SSH: A secure way to transfer files and remotely login to a system - 22
+	-Telnet:Remotely login to a system - 23
+	-SMTP: For sending emails - 25
+	-WhoIS: A command to query a target for information - 43
+	-DNS: For translating URLS to IP addresses - 53
+	-TFTP: Quick but less reliable FTP server - 69
+	-HTTP: For displaying web pages - 80
+	-POP3: Retrieves email - 110
+	-NNTP: Used for network news group - 119
+	-NetBIOS: An old Microsoft protocol for naming systems on a local network - 137/138/139
+	-IRC: Chat room - 194
+	-HTTPS: Encrypted HTTP - 443
+	-SMB: Used by Microsoft Active Directory - 445
+	-ICMP: Simple packets containing error essages, informational and control messages - No specific port
+
+
+- Important commands to analyze you network:
+ping, ifconfig, netstat and tracert
+	- ping -c 4 192.168.1.10
+	- nestat - tulpn 
+	- netstat -a
+
+- Model OSI:
+	- Application: Interfaces directly to applications and performs commom application services - POP,SMTP, DNS, FTP, Telnet, HTTP
+	- Presentation:Cocern regarding syntactical differences in data representation -  Network Data Rpresentation(NDR), Lightweight Presentation Protocol(LPP)
+	- Session: Provides the mechanism for managing the dialogue between end-user application processes - NetBIOS
+	- Transport - Provides end-to-end communication control - TCP,UDP
+	-Network - Routes information in the network - IP, ARP, ICMP
+	-Data Link: Data link layer: MAC and LLC - SLIP, PPP
+	-Physical: Describes the physical properties of various communication media as well as the electrical properties and interpretation of the exchanged signals. The physical layer is the actual NIC and the Ethernet cable. - IEEE 1394, DSL, ISDN
+
+- Attacks:
+	- Intrusion: When a hacker breach security and gain unauthorised acess to a system
+	- Blocking: DOS
+	-Malware: An malicious software or file(Trojan, spyware, key logger)
+	-Aplicativo Wigle: Para wardriving
+
+- Firewall:
+	- stand-alone server, sometimes a router, software running on a machine.
+	- Firewalls often used in conjunction with a proxy server. Proxy server is like an VPN.
+	- Authentication: include username and password, a certificate, or a 2-factor token.
+	- Não repudio: Visa garantir que o autor não negue ter criado ou assinado algum documento ou arquivo./ used to ensure that person performing an action on a computer cannot falsely deny that they performed that action.
+	- Least privilege: you only assign the minimum privileges required for that person to do his job, no more.
+
+-CIA: Confidentiality, Integrity and Availability. 
+
+

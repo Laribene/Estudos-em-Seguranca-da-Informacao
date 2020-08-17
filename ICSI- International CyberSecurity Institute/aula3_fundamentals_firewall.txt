@@ -1,0 +1,101 @@
+When you know the IP Adress:
+- You can realize the IP spoofing
+
+
+Types of Firewall:
+- Packet filtering
+	- basic type
+	- incoming packet is examined
+	- Usually, many operating systems include basic packet filtering
+	- Do not offer any user authentication
+	- See only the header and not the packet content.
+	- Do not know the particular client 
+	
+- Application gateway(or application proxy)
+	-Authentication and verification
+	-Examine the client application and the server-side application to which it is trying to connect to.
+	-Use a lot of system resources
+	- suscetible to various flooding attacks, because the flooding attack may be the additional time it takes for an application to negotiate authenticating a request.
+	- When the connection is established, packets are not checked.
+	- Provide the user logon method to mitigate some attacks
+	
+	
+	
+- Circuit level gateway
+	-More security than the apllication gateways
+	-Implemented on high-end equipment.
+	- Authentication the user is the first step.
+	-More secure solution
+
+
+
+- Stateful packet inspection
+	- improvement of basic packet filtering
+	-permit acess based on the examination of the current packet, and on data derived from previous packets in the conversation.
+	- less susceptible to ping floods and SYN floods, because examines the source IP of all packets
+	-most secure
+
+
+Firewall Implementation:
+
+Host Based
+	-Installed on a machine with an operating system
+	- Using that machine as your firewall
+	- Need and hardened operating system. This means: Ensuring all patches are updated, Uninstalling unneeded application or utilities, Closing unused ports, Turning off all unused services.
+	
+Dual-homed host
+	- Firewall running on a server with at least two network interfaces.
+	-Server acts as a router between the network and the interfaces
+	- Very cheap and depends on the operating system
+	-require a separate subnet between the application gateway and the router.
+	- There are physically two separate firewalls.
+	
+Router -based firewall
+	- packet filtering
+	- can be shipped preconfigured
+
+Screened host
+	-combination of firewalls, bastion host(might be an application gateway) + screening router(router packet) or vice versa.
+	- Needs one network interface
+	- does not require a separate subnet between the application gateway and the router.
+	- less secure than dual-homed host
+	- any security flaw or misconfiguration affects both firewalls.
+	
+
+Proxy Servers
+	- Used with a firewall to hide the IP adress and to present a single IP address to the outside world.
+	- Provide a cntrol mechanism, because it's log all outgoing traffic.
+	-Runs as software on the same machine as your firewall.
+	- 
+
+Windows firewall:
+	- If you not need a port, block it
+	- Always block ICMP traffic, because of ping, tracert and so on.
+	- Windows 10: Firewall enable the Inbound rule titled: "File and Printer Sharing(Echo Request - ICMPv4-In)"
+
+Linux firewall:
+	- Iptables: Tables, chains, and rules
+	- The tables contain chains of rules:
+	Packet filtering: INPUT: incoming packets, OUTPUT: sent out chain processes traffic, FORWARD: chain applies to routed packets.
+	Network address translation: Outbound traffic that initiates a new connection. Used if your machine serves as a gateway or proxy server.
+	Packet alteration:alters or mangles packet.
+
+-iptables -F
+-iptables -N block
+-iptables -A block -m state --state ESTABLISHED, RELATED -j ACCEPT
+
+List current iptables rules:
+-iptables -L
+
+Allow communication on a specific port, SSH 22, or HTTP 80:
+- iptables -A INPUT -p tcp -dport ssh -j ACCEPT
+-iptables -A INPUT -p tcp -dport 80 -j ACCEPT
+
+A: Append this rule to a rule chain
+-L: LIst the current filter rules
+-p The connection protocol used
+--dport: The destionation port required for the rule. A single port can be given or a range.
+-i: Only match if the packet is coming in on the specified interface.
+-v: Verbose output
+-s, --source: address source specification
+-d, --destination: address destination specification
