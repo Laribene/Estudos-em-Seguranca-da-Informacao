@@ -59,4 +59,10 @@ Session Hijacking:
 - Quando um hacker intercepta uma sessão TCP entre duas maquinas.
 -Man in the middle
 
- 
+Preventing IP Spoofing:
+1) run in the Linux:
+sudo gedit /etc/sysctl.conf (the file is used to override default kernel parameters)
+2) Uncomment the two lines:
+net.ipv4.conf.default.rp_filter=1
+net.ipv4.conf.all.rp_filter=1
+
