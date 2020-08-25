@@ -99,3 +99,5 @@ A: Append this rule to a rule chain
 -v: Verbose output
 -s, --source: address source specification
 -d, --destination: address destination specification
+
+https://central.sierti.com.br/knowledgebase/73/iptables-Como-listar-e-deletar-regras-de-Firewall.html
