@@ -98,6 +98,17 @@ Cracking Passwords:
 	- Inviavel para criptografias mais complexas.
 
 
+Habilitar o BitLocker no Windows:
+(Criptografar a unidade de disco)
+1)Escreva na caixa de busca:
+gpedit.msc
+2) Na janela Editor de Politica de Grupo Local expanda Configuração do PC -> Modelos Adm -> Componentes do Windows -> Criptografia de Unidade Bitlocker -> Unidades do SO.
+3)Clique duas vezes na opção Exigir autenticação adicional na inicialização.
+4) Abrirá outra janela e clique em habilitado(veja se a opção Permitir BitLocker sem um TPM está habilitado)
+5) Clique em aplicar e ok.
+6) Depois vai no explorador de arquivos e vai no disco local e aperte com o botão direito e clique na opção Ativar Bitlocker
+7) Escolha a opção Digite uma senha
+8) Depois vai ter varios passos pra colocar a senha e ai vc reinicia e ele vai pedir a senha do Bitlocker.
 
 
 
