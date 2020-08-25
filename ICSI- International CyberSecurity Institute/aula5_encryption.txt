@@ -91,7 +91,7 @@ Cracking Passwords:
 - Rainbow tables
 	-Hashes pré-calculados de todas as senhas disponiveis.
 	- Tenta encontrar uma correspondencia do hash, para que assim o texto original seja encontrado.
-	-Ferramentas que utilizam rainbow tables: Ophcrack
+	-Ferramentas que utilizam rainbow tables: Ophcrack (quebrar senhas hash)
 
 -Força bruta:
 	- Tentar todas as chaves possiveis. 
