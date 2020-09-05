@@ -80,15 +80,17 @@ string de tamanho fixo, ou seja, o hash tem sempre o mesmo tamanho.
 		-SHA2: Duas funções de hash semelhantes(SHA256(usa palavras de 32 bytes) e SHA 512(usa palavras de 64 bytes))
 		- SHA3
 
+https://www.it-swarm.dev/pt/security/diferenca-entre-o-hashing-de-uma-senha-e-criptografia/958074243/
+
 Cracking Passwords:
 
--John the Ripper:
+-John the Ripper:(Criptografia)
 	-Arquivos de senha
 	- Indentifica qual algoritmo de criptografia foi utilizado para cifrar as senhas presentes no arquivo que foi indicado
 	(arquivo este que está contido no windows e no linux) e conseguir quebra-las.
 	- john passwd
 	- john -wordfile:/usr/share/wordlist/rockyou.txt -rules passwd
-- Rainbow tables
+- Rainbow tables (Hash)
 	-Hashes pré-calculados de todas as senhas disponiveis.
 	- Tenta encontrar uma correspondencia do hash, para que assim o texto original seja encontrado.
 	-Ferramentas que utilizam rainbow tables: Ophcrack (quebrar senhas hash)
