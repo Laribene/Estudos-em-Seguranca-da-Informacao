@@ -43,12 +43,13 @@ Snort: Software livre de detecção de intrusão em redes(NIDS)
 Suricata: ID/PS detecta e tbem previne ou seja bloqueia
 
 
+
 INTRUSION PREVENTION SYSTEMS(IPS)
 
 Tem que trabalhar online.
 O IPS possibilita decisões de acesso baseadas no conteudo da aplicação e não apenas no endereço IP 
 ou em portas, como os firewalls tradicionais trabalham.
-Entretando nada imprede que IPS utilizem regras baseadas em portas e endereço IP.
+Entretando nada impede que IPS utilizem regras baseadas em portas e endereço IP.
 
 IDS e IPS em alguns casos são complementares.
 
