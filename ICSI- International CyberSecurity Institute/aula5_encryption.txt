@@ -44,7 +44,7 @@ Modern Encryption:
 			Como transmitir a chave quem q ela seja comprometida?
 		- Data Encryption Standard:
 		- Blowfish: Funciona em blocos da mensagem de cada vez. Chave de comprimento variavel 32-448 bits.(Gratuito)
-		- AES: Advanced Encryption Standard:Algoritmo Rijndael. 3 tamanhos de chave, 128,192,256 bits. Cifra de bloco. 
+		- AES: Advanced Encryption Standard:Algoritmo Rijndael. 3 tamanhos de chave, 128,192,256 bits. Cifra de bloco. (Criptografia mais segura)
 	
 	- Public Key Encryption(criptografia assimetrica):
 		A chave publica(qualquer pessoa pode ter acesso) é usada para criptografar uma mensagem ao destinatário e a chave privada(mantida segura e privada)
