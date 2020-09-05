@@ -56,3 +56,9 @@ UTM Appliance
 Suricata: ID/IPS livre
 
 Fazer um analise prévia da rede para implementar o IDP e IPS
+
+
+HIDS – Host Intrusion Detection System – Ou – Sistema de Detecção de Intrusão em Host (dispositivo) – Nesta configuração o IDS é instalado individualmente no dispositivo, sendo ele um computador de trabalho ou servidor, com isso a ferramenta é dedicada aquela máquina e “ignora” o que está em seu redor, assim que ela detecta algo de anormal naquele dispositivo faz a sua ação configurada: Apenas colocar em Log, enviar um alerta ao responsável, acionar umIPS ou firewall e etc…
+Com esta configuração em Host CADA máquina deve possuir um software de HIDS (existem alguns pagos e gratuitos/open-source por aí.
+
+NIDS – Network Instrusion Detection System – Ou – Sistema de Detecção de Intrusão em Rede – é configurado em um único dispositivo, normalmente um servidor com boas configurações de processador e memória RAM. Para o NIDS existem duas principais opções, ele configurado como um Sniffer de rede, ou seja, TUDO passa por ele para entrar e sair da rede, como se ele fosse o roteador de bordo da rede – para isso o servidor que hospeda o NIDS deve ser extremamente potente, pois se não for ele pode prejudicar a navegação à internet, deixando o tráfego lento, pois tudo tem que passar por ele, tanto para entrar, quanto para sair da rede – Outra opção – e talvez a mais aconselhada – é configurar o NIDS com um port mirror no switch principal da rede, assim ele tem acesso a todas as informações que são espelhadas, mas não deixa a rede lenta.
