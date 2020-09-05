@@ -28,6 +28,7 @@
 	-IRC: Chat room - 194
 	-HTTPS: Encrypted HTTP - 443
 	-SMB: Used by Microsoft Active Directory - 445
+	(Bloco de Mensagem de Servidor: fornecer acesso compartilhado a arquivos, impressoras e portas seriais e comunicações diversas entre nós sobre uma rede)
 	-ICMP: Simple packets containing error essages, informational and control messages - No specific port
 
 
@@ -49,7 +50,7 @@ ping, ifconfig, netstat and tracert
 - Attacks:
 	- Intrusion: When a hacker breach security and gain unauthorised acess to a system
 	- Blocking: DOS
-	-Malware: An malicious software or file(Trojan, spyware, key logger)
+	-Malware/Virus: An malicious software or file(Trojan, spyware, key logger)
 	-Aplicativo Wigle: Para wardriving
 
 - Firewall:
