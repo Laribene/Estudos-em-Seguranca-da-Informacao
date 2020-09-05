@@ -75,6 +75,7 @@ Windows firewall:
 
 Linux firewall:
 	- Iptables: Tables, chains, and rules
+	O iptables não é essencialmente um firewall, mas um programa que, por meio de seus módulos, possibilita ao usuário configurar o kernel Linux e o conjunto de regras do filtro de pacotes — função típica do firewall.
 	- The tables contain chains of rules:
 	Packet filtering: INPUT: incoming packets, OUTPUT: sent out chain processes traffic, FORWARD: chain applies to routed packets.
 	Network address translation: Outbound traffic that initiates a new connection. Used if your machine serves as a gateway or proxy server.
