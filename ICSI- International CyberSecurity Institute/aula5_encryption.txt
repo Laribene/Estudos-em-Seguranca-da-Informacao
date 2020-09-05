@@ -71,14 +71,14 @@ string de tamanho fixo, ou seja, o hash tem sempre o mesmo tamanho.
 	- Livre de colisões:Dois valores de entradas diferentes não produzem a mesma saida.
 	- Salt: bits aleatorios que são usados como entradas para o hash.
 
--MD5:
-	- Não é resistente a colisões.
+	-MD5:
+		- Não é resistente a colisões.
 
--SHA:
-	- Seguro e sem colisões
-	-SHA1: 160 bits e parecido com o MD5.
-	-SHA2: Duas funções de hash semelhantes(SHA256(usa palavras de 32 bytes) e SHA 512(usa palavras de 64 bytes))
-	- SHA3
+	-SHA:
+		- Seguro e sem colisões
+		-SHA1: 160 bits e parecido com o MD5.
+		-SHA2: Duas funções de hash semelhantes(SHA256(usa palavras de 32 bytes) e SHA 512(usa palavras de 64 bytes))
+		- SHA3
 
 Cracking Passwords:
 
