@@ -67,7 +67,7 @@ Types of IDS:
 	Packet Logger: Similar to sniffer mode. The difference is that the packet contents
 	are written to a text file log rather than displayed in the console.
 
-	Network Intrusion Detection:
+	Network Intrusion Detection:(NIDS)
 	Snort uses a heuristic approach to detecting anomalous traffic. 
 	Using the shell.
 	Snort is good use in conjunction with host -based firewall or as an IDS  on each server to provide additional security.
