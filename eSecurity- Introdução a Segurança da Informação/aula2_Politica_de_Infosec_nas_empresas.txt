@@ -44,7 +44,7 @@ Ai volta pro Plan e continua infinito
 
 O que é risco?
 Criam e aumentam o potencial de danos e perdas.
-risco = Ameaça x vulnerabilidade x Valor do risco
+risco = (Ameaça x vulnerabilidade x Valor do risco(impacto))/ medidas de segurança
 
 - Conquistando a aceitação:
 Deve ser assinada por funcionarios e terceiros, de todas as classes hierárquicas dentro da empresa.
