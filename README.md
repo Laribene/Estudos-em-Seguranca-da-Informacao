@@ -12,6 +12,6 @@ Anotações relacionadas ao meu estudo em segurança da informação.
 
 **5) Resumo do curso de Splunk Fundamentals 1 e 2** 
 
-**6) Desafios para adentrar no projeto de extensão intitulado Residência em Segurança da Informação da Universidade Federal do Ceará(UFC).**
+**6) Desafios realizados para adentrar no projeto de extensão intitulado Residência em Segurança da Informação da Universidade Federal do Ceará(UFC).**
  
 
