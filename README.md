@@ -1,4 +1,4 @@
-# Information Security studies
+# Estudos em Segurança da Informação
 
 Anotações relacionadas ao meu estudo em segurança da informação.
 
