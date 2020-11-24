@@ -4,4 +4,4 @@ A Trend Micro é uma empresa multinacional de cibersegurança com sede global em
 
 ## Veja o resumo no site:
 
-https://laribene.github.io/Estudos-em-seguranca-da-informacao/Trend%20Micro/
+https://laribene.github.io/Estudos-em-seguranca-da-informacao/Trend_Micro/
