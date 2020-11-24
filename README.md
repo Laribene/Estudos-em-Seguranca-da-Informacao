@@ -2,7 +2,7 @@
 
 Anotações relacionadas ao meu estudo em segurança da informação.
 
-**1) Resumo do treinamento da Fortinet **
+**1) Resumo do treinamento da Fortinet**
 
 **2)** Resumo do curso para conseguir o Certificado de Especialista em Segurança de rede do Instituto International de CiberSegurança
 
