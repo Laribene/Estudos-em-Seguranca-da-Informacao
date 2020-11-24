@@ -1,0 +1,63 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Apex One Server Considerations</title>
+</head><body><b><span style="font-size: 12pt">EDR and Integrated Endpoint Sensor</span></b><ul><li style="list-style-type: none">- Must be on Full Version SQL 2016 (Not SQL Express)</li>
+<li style="list-style-type: none">- Full Text Search feature required</li>
+<li style="list-style-type: none">   This is sprcified during install, or added via the SQL installer</li>
+<li style="list-style-type: none">- Integrated Endpoint Sensor is a Separate License</li>
+</ul>
+<br/>
+<b><span style="font-size: 12pt">In Place Upgrade or Migration</span><br/>
+</b><b>- <i>The recommended path is Migration to a new server</i></b><br/>
+<b>  PROS</b><ul><li style="list-style-type: none">Easily Controlled Upgrade Path</li>
+<li style="list-style-type: none">Allows new module and component testing without affecting production greatly</li>
+<li style="list-style-type: none">Impact on production is very low</li>
+<li style="list-style-type: none">Unsupported legacy OS's not impacted</li>
+</ul>
+<b>  CONS</b><ul><li style="list-style-type: none">Resources for new server and databases</li>
+<li style="list-style-type: none">Slightly more work to migrate agents over</li>
+</ul>
+<b>- The In-Place Upgrade</b><br/>
+<b>  PROS</b><ul><li style="list-style-type: none">Minor increase in resources, no new server required</li>
+<li style="list-style-type: none">No agent migration required (except within the aspect of movig unsupported OS's off the server)</li>
+</ul>
+<b>  CONS</b><ul><li style="list-style-type: none">Some legacy Server OS (Windows XP) are now unsupported, thus requiring major OS upgrade on the server</li>
+<li style="list-style-type: none">The unsupported Legacy Workstation OS'S will need to migrate to another server prior to upgrade, which may require another server and install of 11/XG/XG SP1</li>
+<li style="list-style-type: none">Backups and Disaster Recovery practices must be done prior to upgrading</li>
+<li style="list-style-type: none">Increase management of Policies to control agent upgrades</li>
+</ul>
+<br/>
+<span style="font-size: 12pt"><b>TLS/Sigital Signature Changes</b></span><br/>
+<i><b>- TLS 1.2 is mandatory and cannot be disabled</b></i><ul><li style="list-style-type: none">Agent Communication over the HTTPS port utilizando TLS 1.2</li>
+<li style="list-style-type: none">No Windows 7 e Server 2008R2, TLS 1.2</li>
+</ul>
+<img src="image.png"/><br/>
+<i><b>- Digital Signature checking is required and cannot be disabled</b></i><br/>
+All server side components, modules, agent files require the Digital Signature to be validated<br/>
+These certificates are inherently updtated from Windows Update<br/>
+  - Certificate Revocation List<br/>
+If these signatures cannot be verified, the agent will not be able to Update<br/>
+<br/>
+<span style="font-size: 11pt"><b>Server Platforms</b></span><br/>
+- Datacenter e Standard <br/>
+Windows 2012<br/>
+2012 R2<br/>
+2016<br/>
+2019<br/>
+<br/>
+<span style="font-size: 12pt"><b>SQL Considerations:</b></span><br/>
+<i><b>Com Endpoint Sensor:</b></i><br/>
+- SQL 2016 and above, Full Version Only<br/>
+  Full Text Search enabled<br/>
+<i><b>Sem Endpoint Sensor</b></i><br/>
+- 2016<br/>
+2016 Express SP1<br/>
+2017<br/>
+For a complete list, reference Apex One System Requirements<br/>
+<i><b>Code Base (HTTPDB) has been removed from Apex One</b></i><br/>
+<br/>
+<b><span style="font-size: 12pt">Network topology/ Infrastructure:</span></b><br/>
+<img src="image 2.png"/><br/>
+<br/>
+<img height="250" src="image 3.png" width="597"/></body></html>

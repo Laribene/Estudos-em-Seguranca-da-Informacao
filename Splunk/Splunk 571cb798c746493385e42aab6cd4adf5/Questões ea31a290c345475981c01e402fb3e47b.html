@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Questões</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ea31a290-c345-4759-81c0-1e402fb3e47b" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⁉️</span></div><h1 class="page-title">Questões</h1></header><div class="page-body"><h1 id="47720d82-d5fe-45b0-9629-92cc710bf077" class="">Modulo 1</h1><figure id="6319f208-c0ad-424b-ba84-15d0d711efc7" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled.png"><img style="width:834px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled.png"/></a></figure><p id="39d78e8d-6a7e-400f-8075-6f8beebc0f06" class="">
+</p><h1 id="8d119785-9a9e-43a6-a93c-b21adaff920c" class="">Modulo 2</h1><figure id="3564f073-8809-44fb-8b6a-4f97bff4af89" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%201.png"><img style="width:831px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%201.png"/></a></figure><p id="6fdc4f48-e4a3-47c9-980f-dba322db48dd" class="">
+</p><figure id="5444a532-1f08-4781-90c3-6c48498f0b1c" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%202.png"><img style="width:655px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%202.png"/></a></figure><p id="66f5ba6d-6af3-4638-930b-4e675b492dce" class="">
+</p><figure id="121537e7-05b5-4251-bca2-38c9bee5cf67" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%203.png"><img style="width:683px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%203.png"/></a></figure><h1 id="9e04ebbf-08cd-4dc1-84d9-3ca511ca6e4d" class="">Modulo 3</h1><figure id="badc3942-f995-4800-abbf-e3db8ee33f97" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%204.png"><img style="width:595px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%204.png"/></a></figure><p id="1e806045-7f05-4687-8396-a352208f2f64" class="">
+</p><figure id="b3d5edeb-f3fb-4ed8-ab0b-24c1c8514aa1" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%205.png"><img style="width:600px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%205.png"/></a></figure><p id="cb6068e2-82f4-4e30-a86c-89b5dc2beb4e" class="">
+</p><figure id="abbd4428-77f0-40d3-8411-fc8e0c88787b" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%206.png"><img style="width:869px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%206.png"/></a></figure><p id="b4e6ad9b-4f16-4323-883a-efa6f648280d" class="">
+</p><figure id="8ba1abdc-6e03-4b0f-8e10-ac95ba7d8b3a" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%207.png"><img style="width:873px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%207.png"/></a></figure><p id="29c3a1c6-edee-4a65-aedc-df775d8fac46" class="">
+</p><h1 id="786fe6d4-0efa-4a00-ba3e-bee2d647bba6" class="">Modulo 4</h1><p id="308a9ee9-3c72-4f82-ac98-164e93aef988" class="">
+</p><figure id="3a5446ea-1fbc-405c-87bc-1c89bae137f7" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%208.png"><img style="width:536px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%208.png"/></a></figure><figure id="3a103cb5-69fc-4c10-b03e-51ef28eb56e2" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%209.png"><img style="width:606px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%209.png"/></a></figure><figure id="bbd777e4-bbb6-4cc3-aa96-69f2a6afe6c6" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2010.png"><img style="width:886px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2010.png"/></a></figure><p id="01cb5138-b73f-4d83-988a-fa64bd6b4b4f" class="">
+</p><h1 id="471c06a6-fc80-45c6-9464-d49ff641ca49" class="">Modulo 5</h1><figure id="bb12e66f-01a0-48e9-a4c4-ce746327ef9f" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2011.png"><img style="width:859px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2011.png"/></a></figure><p id="9d02865c-0c65-4492-9455-071da415636c" class="">
+</p><figure id="67685cc8-89a8-4db4-81d3-8e29e8f9cb19" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2012.png"><img style="width:794px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2012.png"/></a></figure><p id="1b023da7-12c9-49e0-9edd-818f5cb7c9e5" class="">
+</p><h1 id="0ac0696b-7511-46f2-9e1b-1ae74e5baadd" class="">Modulo 6</h1><figure id="f712d780-618a-4a9a-92e0-1607e22000d5" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2013.png"><img style="width:826px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2013.png"/></a></figure><p id="0eff5093-494f-4182-a9ff-03c7fea9f272" class="">
+</p><figure id="2e54a578-68bc-40b9-8090-e61307bcc90b" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2014.png"><img style="width:856px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2014.png"/></a></figure><figure id="d2dc71f4-401f-4428-96d1-9e24f6e373ba" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2015.png"><img style="width:870px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2015.png"/></a></figure><figure id="cafea766-79ff-4185-823c-2ff49b63bd3e" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2016.png"><img style="width:852px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2016.png"/></a></figure><p id="9971acd0-7b0a-4d49-9a8b-07f62ed48478" class="">
+</p><h1 id="b735d331-0841-4cd1-ac8b-d34a650522f2" class="">Modulo 8</h1><figure id="acbac4e1-a3fb-47a2-9afe-ff77bad81406" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2017.png"><img style="width:764px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2017.png"/></a></figure><figure id="c5525a6b-d349-4c11-bdf6-d4e468b5ce19" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2018.png"><img style="width:782px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2018.png"/></a></figure><p id="b72b980c-a3dc-460a-a33e-6b5ad62e4af7" class="">
+</p><figure id="b4e312a4-89e9-4afd-9458-0a21b6e507f4" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2019.png"><img style="width:845px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2019.png"/></a></figure><p id="f877c037-9c90-4403-864f-d9f6e246cf15" class="">
+</p><figure id="5c8d9107-d62f-49f1-9736-77bdc34b92cb" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2020.png"><img style="width:853px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2020.png"/></a></figure><p id="36ad249f-9e2d-4dd1-a741-4417f142409e" class="">
+</p><figure id="592b05a3-4701-4eca-b693-c3decdb18acc" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2021.png"><img style="width:799px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2021.png"/></a></figure><p id="ff90a67d-1aba-40a4-86a6-0c5e1012f17b" class="">
+</p><figure id="f6e41f7a-8255-4dab-b6ba-e5fa4e2cfe7d" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2022.png"><img style="width:829px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2022.png"/></a></figure><p id="243dc8eb-1501-4bf9-ada3-82a0519ec3eb" class="">
+</p><figure id="7c5a81e0-059f-4a42-b4c1-063b6eebaf26" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2023.png"><img style="width:883px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2023.png"/></a></figure><p id="77e39a1e-712a-41f8-8958-3083fef358a9" class="">
+</p><h1 id="6ea91dbf-7d00-463f-8b90-5f0a46d5e07e" class="">Modulo 9</h1><p id="d1f1f264-8568-447e-b42d-b490c7901ff1" class="">
+</p><figure id="684bf503-a224-4b76-91fc-8db4d876037c" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2024.png"><img style="width:497px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2024.png"/></a></figure><p id="369e29f2-c782-4482-bae7-19fe2fac7cca" class="">
+</p><figure id="4229fcb5-81e1-4042-9cb7-1a151418d843" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2025.png"><img style="width:611px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2025.png"/></a></figure><p id="a11db02b-e9b6-4efd-9e10-7d673b26347b" class="">
+</p><figure id="57082bd5-f350-48fc-beb4-243ba6d0a422" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2026.png"><img style="width:514px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2026.png"/></a></figure><p id="ef6e9030-f724-4554-acc6-e8336ace05e9" class="">
+</p><figure id="72283540-20bb-408b-be5b-e0e755bf01dc" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2027.png"><img style="width:612px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2027.png"/></a></figure><p id="1ef23477-3585-4e2d-a16f-7d93ad6e626c" class="">
+</p><h1 id="aa86719c-ad48-4153-8014-9bb0a24c6905" class="">Modulo 10</h1><p id="47d3843e-fc55-44bd-9273-c34917453dbd" class="">
+</p><figure id="5acc932a-eb44-4d61-80bb-a4eb0706d460" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2028.png"><img style="width:788px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2028.png"/></a></figure><p id="dfeb6a72-8236-48cf-bac1-4dcd6601c5b6" class="">
+</p><figure id="e9a5bae7-a0d1-4c38-91ab-bfa12bd84915" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2029.png"><img style="width:660px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2029.png"/></a></figure><p id="57335c8a-340a-42ad-a614-46d711b3a934" class="">
+</p><figure id="de860696-6588-4ce4-a453-51b3d2e4a1b8" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2030.png"><img style="width:829px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2030.png"/></a></figure><p id="d5249db1-2cee-4f9b-97d9-7d79784f1299" class="">
+</p><h1 id="91366aea-3653-4f6f-a0ce-184ce1d038fc" class="">Modulo 11</h1><figure id="5f3b299c-530d-4ff9-8dd3-f4b59c821ba3" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2031.png"><img style="width:643px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2031.png"/></a></figure><p id="449c343a-14ae-4cfa-932e-2392bedb03cf" class="">
+</p><figure id="c58c2671-d783-45df-aa89-bdadbbb342ab" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2032.png"><img style="width:848px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2032.png"/></a></figure><p id="0ff75bd4-bbb2-48a0-86ac-c0cead1adcdc" class="">
+</p><h1 id="12d2a3d3-c730-486f-acbc-0614b0badd9f" class="">Modulo 12</h1><figure id="87f27341-b683-44f1-9a26-6c5ab179bbf0" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2033.png"><img style="width:874px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2033.png"/></a></figure><figure id="43e158bc-92a3-46c2-80de-ef4fe917ff1b" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2034.png"><img style="width:842px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2034.png"/></a></figure><p id="8ec6f560-d0b1-4548-9f06-ef066c6cbda5" class="">
+</p><figure id="6226664d-5cb9-4e13-b5bc-6dcade8d694d" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2035.png"><img style="width:345px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2035.png"/></a></figure><p id="00122c8e-8869-459e-99be-42bdcbcd0aae" class="">
+</p><figure id="7cf2235b-715c-47e3-9acb-e612664a3274" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2036.png"><img style="width:790px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2036.png"/></a></figure><p id="2bf84ce1-2a32-4fd2-ac73-2aad094af892" class="">
+</p><h1 id="1b584ede-4a42-468c-b125-2804b89396a5" class="">Modulo 13</h1><figure id="2bccb1f4-d292-485e-bfe4-7603b4e41e08" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2037.png"><img style="width:852px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2037.png"/></a></figure><p id="0cdbb158-69d8-41e8-9f12-a0b052db6a71" class="">
+</p><figure id="1514cfc9-d54b-4c29-9a8a-190f42e89541" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2038.png"><img style="width:823px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2038.png"/></a></figure><p id="6b063e16-3e65-48f4-bfed-a1c75ce1cac2" class="">
+</p><figure id="88ba32be-2f01-427d-9042-cad9ae590bbc" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2039.png"><img style="width:689px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2039.png"/></a></figure><p id="b44c397f-c9ef-48ba-9c41-9a4365e98d8c" class="">
+</p><figure id="33fb1cb1-c9d2-4285-9266-9483784fbd84" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2040.png"><img style="width:833px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2040.png"/></a></figure><p id="c71c677d-6005-4dcd-851c-dc8ca41683cb" class="">
+</p><figure id="90f01bba-9240-4c7f-8985-63078e682c40" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2041.png"><img style="width:635px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2041.png"/></a></figure><p id="74a20014-3086-49d5-ab52-114b9e13ea12" class="">
+</p><h1 id="7bb7d54b-4b72-4479-adae-142d006efa0c" class="">Modulo 14</h1><figure id="79fe6513-bf55-4f72-bdd4-e82db7205cec" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2042.png"><img style="width:861px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2042.png"/></a></figure><p id="7086e976-4b3c-478c-8f67-b05b45b039b1" class="">
+</p><figure id="dc41505a-a981-46b2-afc9-f4f6042eb0e3" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2043.png"><img style="width:852px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2043.png"/></a></figure><p id="1d304cf9-431c-4dc9-97ae-5903e65d960c" class="">
+</p><figure id="68adc8c9-205c-4f26-87ab-a957517f747a" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2044.png"><img style="width:531px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2044.png"/></a></figure><p id="568510fb-604a-4023-b53b-37a4f387f00a" class="">
+</p><p id="08796fdc-568c-49ae-9137-fd5e84f4ab98" class="">
+</p><hr id="c51acd1f-1d4f-4c00-bf35-4f78e502797c"/><hr id="63623266-5b20-4a33-8bd3-b3b5856d17b3"/><hr id="8959521c-6fa7-4470-8a16-ebe5366124bf"/><hr id="cad9f6c9-8a15-4a1e-a92c-47dee58cff6f"/><hr id="a2c3673a-7411-4e4a-b6f1-5b4263c132d1"/><hr id="46474874-69aa-49ae-9163-b4aaf3b63457"/><hr id="c3530c03-a191-47ad-a3dd-098117ea5e88"/><hr id="ecbca89d-c892-4d10-9aa4-cb9996564402"/><hr id="3b65d1e6-4588-4c00-91cc-9cd00b3e634e"/><p id="b6ef804b-90a6-474b-9b96-1801c4a3f775" class="">
+</p><figure id="0c398277-9291-4cea-bfe8-f22d8febe8af" class="image"><a href="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2045.png"><img style="width:837px" src="Questo%CC%83es%20ea31a290c345475981c01e402fb3e47b/Untitled%2045.png"/></a></figure></div></article></body></html>
