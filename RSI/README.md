@@ -12,8 +12,8 @@ está escrita em linguagem leet, você consegue extrair essa informação?
 
 **Desafio 2**: Interceptamos uma mensagem porém ela está criptografada. Entretanto, sabemos
 que a mensagem foi encriptada da seguinte forma: "cada letra torna-se sua correspondente
-na ordem do alfabeto eg: a=1, b=2 e então cada letra passa pela seguinte função f(x) = x^2
-+ 2x". Você deve decriptar utilizando um código que não utilize força bruta pois
+na ordem do alfabeto eg: a=1, b=2 e então cada letra passa pela seguinte função f(x) = x^2 + 2x". 
+Você deve decriptar utilizando um código que não utilize força bruta pois
 necessitamos de velocidade na hora de decriptar as próximas mensagens. Você consegue
 fazer um decoder?
 
