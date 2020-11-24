@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Active Directory Synch</string>
+  <key>nodeid</key><string>4b6eeab6-2030-4b40-b8f0-77772e8a86f8</string>
+  <key>modified_time</key><integer>1597784053</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1597783765</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>7</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>
