@@ -6,4 +6,4 @@
 
 ## Veja o resumo no site: 
 
-https://laribene.github.io/Estudos-em-seguranca-da-informacao/Splunk/
+https://www.notion.so/Splunk-51ef6deb216f4574897ec92cbf5dd995
