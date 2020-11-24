@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Desafio 2
+Interceptamos uma mensagem porem ela esta criptografada. Entretanto, sabemos que a mensagem foi encriptada da seguinte forma: "cada letra torna-se sua correspondente na ordem do alfabeto eg: a=1, b=2 e então cada letra passa pela seguinte função f(x) =  x^2 + 2x". Você deve decriptar utilizando um código que não utilize força bruta pois necessitamos de velocidade na hora de decriptar as proximas mensagens. Você consegue fazer um decoder?
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEs3x8/1yB/og+agf3m0VIEmuBMZkFAl9xHZoACgkQm0VIEmuB
+MZnFYQf+PAu7Dizcc/QeCeSSu4UNq9Yk9CA911YhNqHtXAjq/J3WokUjU5JiYLXz
+FfErt4wn83Ie+FxrbN93umWPQxfiM/fi7ccQtXoU2jSBFxoHrSc83SdokWBTXehd
+gvnFMY2shxMl6UWbw/5opcdSLTZPacFQ9Ble6UbSLWrCa1kyGoqk5j3eGPoBzcZY
+XwioipP83NKMwCHhg49+2sDz0UpYvVIcaLiyLQgjUNunCUhtKCSUHYJpGsY+J1jW
+uddSxTbtsLVQISAswvgEpIli7/OonHQfewcpRtNwBitZ3v2SqHfQOE8mtQuRnF2L
+I7QF2VL8ly5OzTy9hBH4omROcjSn/A==
+=e2Oz
+-----END PGP SIGNATURE-----
