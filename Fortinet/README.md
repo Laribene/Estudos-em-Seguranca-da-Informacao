@@ -4,4 +4,4 @@ A Fortinet é uma empresa multinacional da Califórnia, com sede em Sunnyvale, S
 
 ## Veja o resumo no site: 
 
-https://laribene.github.io/Estudos-em-seguranca-da-informacao/Fortinet/Fortinet%20basics/
+https://laribene.github.io/Estudos-em-Seguranca-da-Informacao/Fortinet/Fortinet%20basics/
