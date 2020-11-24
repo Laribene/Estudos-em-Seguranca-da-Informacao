@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Desafio 3
+Encontramos um cofre em html, você consegue descobrir a senha que gera a mensagem "Acesso Garantido"?
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEs3x8/1yB/og+agf3m0VIEmuBMZkFAl9xxkIACgkQm0VIEmuB
+MZkqVQgAmHpB+zaTe9pnp4djgqS9gbEAGOGCZseUxatWxV1+RbR/LviEBY23OYvE
+hqTX9zpGXbUynLKGJo0RilssKBwiy9tovu8pevwTqyMoarTmfxSHxnbOosrXZdYY
+sL++ckvuI4THp0VXakMrnfKzgFT5N7/o2zAoYtF93GfYuoHUrzYkxRVCSdywB/Y8
+m8P1a/rcDAJsSNKzJyldhzmr+PBjFykdWJ3TmRkUdXHCzDK4zrMjr5m6yVEzZQ+K
+Wd/s5K120PPMO1cqBydN3kxB4CqftQWOwjUmpZ9FJPBF5sqVCosdVbhzEEFCs30g
+wH8iAikwq6pMF6u3AEp9CVR9TQPHTA==
+=eWYa
+-----END PGP SIGNATURE-----
