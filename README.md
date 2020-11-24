@@ -10,8 +10,8 @@ Anotações relacionadas ao meu estudo em segurança da informação.
 
 **4) Resumo do curso de Introdução a Segurança da Informação da eSecurity**
 
-**6) Resumo do curso de Splunk Fundamentals 1 e 2** 
+**5) Resumo do curso de Splunk Fundamentals 1 e 2** 
 
-**5) Desafios para adentrar no projeto de extensão intitulado Residência em Segurança da Informação da Universidade Federal do Ceará(UFC).**
+**6) Desafios para adentrar no projeto de extensão intitulado Residência em Segurança da Informação da Universidade Federal do Ceará(UFC).**
  
 
