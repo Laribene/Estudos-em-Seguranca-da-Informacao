@@ -1,6 +1,6 @@
 # Estudos em Segurança da Informação
 
-Anotações relacionadas ao meu estudo em segurança da informação.
+Anotações relacionadas ao meu estudo em Segurança da Informação.
 
 **1) Resumo do treinamento da Fortinet**
 
