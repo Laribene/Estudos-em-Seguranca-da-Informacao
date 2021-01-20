@@ -14,4 +14,4 @@ Anotações relacionadas ao meu estudo em Segurança da Informação.
 
 **6) Desafios realizados para adentrar no projeto de extensão intitulado Residência em Segurança da Informação da Universidade Federal do Ceará(UFC).**
  
-
+**7) Fundamentos de Ethical Hacking
